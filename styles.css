@@ -110,3 +110,35 @@ section {
     max-width: 100%;
   }
 }
+.events-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+
+.event-item {
+    border: 1px solid #031c40;
+    border-radius: 8px;
+    padding: 1em;
+    background-color: #a6aeb0;
+    text-align: center;
+}
+
+.event-item img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.event-item h3 {
+    margin-top: 0.5em;
+}
+
+.event-item p {
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+}
