@@ -73,3 +73,20 @@ section {
     grid-template-columns: 1fr;
   }
 }
+footer {
+  background-color: #031c40;
+  color: #a6aeb0;
+  text-align: center;
+  padding: 1em 0;
+  position: relative;
+  width: 100%;
+}
+
+footer a {
+  color: #64b242;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
