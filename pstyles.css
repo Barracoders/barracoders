@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: #031c40;
+}
+
+nav {
+    background-color: #031c40;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: #a6aeb0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header {
+    background-color: #64b242;
+    color: white;
+    text-align: center;
+    padding: 2em 0;
+}
+
+main {
+    padding: 2em;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+
+.project-item {
+    border: 1px solid #031c40;
+    border-radius: 8px;
+    padding: 1em;
+    background-color: #a6aeb0;
+    text-align: center;
+}
+
+.project-item img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.project-item h3 {
+    margin-top: 0.5em;
+}
+
+.project-item p {
+    text-align: justify;
+}
+
+.project-item a {
+    display: inline-block;
+    margin-top: 0.5em;
+    padding: 0.5em 1em;
+    background-color: #031c40;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.project-item a:hover {
+    background-color: #64b242;
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
