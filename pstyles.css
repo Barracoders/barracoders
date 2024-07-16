@@ -5,7 +5,9 @@ body {
   background-color: white;
   color: #031c40;
 }
-
+p{
+  font-size: 20px;
+}
 nav {
   background-color: #031c40;
   padding: 1em;
