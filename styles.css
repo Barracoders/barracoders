@@ -5,6 +5,9 @@ body {
   background-color: #f0f0f0;
   color: #031c40;
 }
+p{
+  font-size: 20px;
+}
 
 nav {
   background-color: #031c40;
@@ -70,15 +73,6 @@ section {
   height: 200px;
 }
 
-.resource-item a {
-  display: block;
-  padding: 1em;
-  background-color: #031c40;
-  color: #a6aeb0;
-  text-decoration: none;
-  border-radius: 8px;
-  text-align: center;
-}
 
 .more-button {
   display: flex;
@@ -158,4 +152,47 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 1em;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #031c40;
+    font-weight: bold;
+    border: 2px solid #031c40;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+    background-color: #031c40;
+    color: white;
+}
+
+.social-links .social-icon {
+    font-size: 2em;
+    margin-right: 0.5em;
+}
+@media (max-width: 768px) {
+    .social-links {
+        flex-direction: column;
+        gap: 1em;
+    }
+}
+.resource-item a {
+  display: block;
+  padding: 1em;
+  background-color: #031c40;
+  color: #a6aeb0;
+  text-decoration: none;
+  border-radius: 8px;
+  text-align: center;
 }
