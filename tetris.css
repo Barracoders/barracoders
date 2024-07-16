@@ -1,0 +1,34 @@
+body {
+  padding: 25px;
+}
+.title {
+  color: #5c6ac4;
+}
+nav {
+  background-color: #031c40;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 .5em;
+}
+
+nav ul li a {
+  color: #a6aeb0;
+  text-decoration: none;
+  font-weight: bold;
+}
