@@ -1,54 +1,80 @@
-
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f0f0;
-  color: #031c40;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #031c40;
 }
 
 nav {
-  background-color: #031c40;
-  padding: 1em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    background-color: #031c40;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav .logo img {
-  height: 50px;
+    height: 50px;
 }
 
 nav ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
-  margin: 0 .5em;
+    margin: 0 .5em;
 }
 
 nav ul li a {
-  color: #a6aeb0;
-  text-decoration: none;
-  font-weight: bold;
+    color: #a6aeb0;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 header {
-  background-color: #64b242;
-  color: white;
-  text-align: center;
-  padding: 2em 0;
+    background-color: #64b242;
+    color: white;
+    text-align: center;
+    padding: 2em 0;
 }
 
 main {
-  padding: 2em;
+    padding: 2em;
 }
 
 section {
-  margin-bottom: 2em;
+    margin-bottom: 2em;
+}
+
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+#searchInput {
+    width: 70%;
+    padding: 0.5em;
+    font-size: 1em;
+    border: 1px solid #031c40;
+    border-radius: 8px;
+}
+
+.filter-container {
+    display: flex;
+    gap: 1em;
+}
+
+.filter-container label {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-weight: bold;
 }
 
 .resources-grid {
@@ -61,7 +87,7 @@ section {
     border: 1px solid #031c40;
     border-radius: 8px;
     padding: 1em;
-    background-color: #a6aeb0;
+    background-color: #e0e0e0;
 }
 
 .resource-item h3 {
@@ -75,46 +101,97 @@ section {
 .resource-item ul {
     list-style: none;
     padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em;
 }
 
 .resource-item ul li {
-    margin: 0.5em 0;
+    margin: 0;
 }
 
 .resource-item ul li a {
-    color: #031c40;
+    color: white;
     text-decoration: none;
-    border: 1px solid #031c40;
+    background-color: #64b242;
     padding: 0.5em;
     border-radius: 4px;
-    display: inline-block;
+    display: block;
+    text-align: center;
     transition: background-color 0.3s, color 0.3s;
 }
 
 .resource-item ul li a:hover {
-    background-color: #031c40;
-    color: #a6aeb0;
+    background-color: #519d3d;
 }
+.resource-item ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+
+.resource-item ul li {
+    flex: 1 1 calc(50% - 0.5em); /* 50% width with a gap */
+    display: flex;
+}
+
+.resource-item ul li a {
+    flex: 1;
+    color: white;
+    text-decoration: none;
+    background-color: #64b242;
+    padding: 0.5em;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    min-height: 50px; /* Ensure minimum height for uniform size */
+}
+
+.resource-item ul li a:hover {
+    background-color: #519d3d;
+}
+
 
 @media (max-width: 768px) {
     .resources-grid {
         grid-template-columns: 1fr;
     }
+
+    .search-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #searchInput {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .filter-container {
+        width: 100%;
+        justify-content: flex-start;
+    }
 }
+
 footer {
-  background-color: #031c40;
-  color: #a6aeb0;
-  text-align: center;
-  padding: 1em 0;
-  position: relative;
-  width: 100%;
+    background-color: #031c40;
+    color: #a6aeb0;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    width: 100%;
 }
 
 footer a {
-  color: #64b242;
-  text-decoration: none;
+    color: #64b242;
+    text-decoration: none;
 }
 
 footer a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
