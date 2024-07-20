@@ -60,11 +60,11 @@ section {
 
 .project-item {
   border: 1px solid #031c40;
-  border-radius: 8px;
-  padding: 1em;
-  background-color: #a6aeb0;
-  text-align: center;
+    border-radius: 8px;
+    padding: 1em;
+    background-color: #e0e0e0;
 }
+
 
 .project-item img {
   max-width: 100%;
@@ -79,19 +79,21 @@ section {
   text-align: justify;
 }
 
-.project-item a {
-  display: inline-block;
-  margin-top: 0.5em;
+.more-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.more-button a {
   padding: 0.5em 1em;
-  background-color: #031c40;
+  background-color: #64b242;
   color: white;
   text-decoration: none;
   border-radius: 4px;
+  font-weight: bold;
 }
 
-.project-item a:hover {
-  background-color: #64b242;
-}
 
 @media (max-width: 768px) {
   .projects-grid {
