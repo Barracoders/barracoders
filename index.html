@@ -142,6 +142,29 @@
         </div>
       </section>
     </main>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBv0VCPLTzWOmFkZ4h6AezE2BVO7IMpoaA",
+    authDomain: "voting-app-111d6.firebaseapp.com",
+    projectId: "voting-app-111d6",
+    storageBucket: "voting-app-111d6.appspot.com",
+    messagingSenderId: "115255623994",
+    appId: "1:115255623994:web:c83f2742da477312561003",
+    measurementId: "G-MEF8R71Y5L"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>    
     <footer>
       <p>
         &copy; 2024
