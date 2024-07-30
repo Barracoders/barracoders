@@ -216,3 +216,24 @@ footer a:hover {
   border-radius: 8px;
   text-align: center;
 }
+#hack-club {
+  background-color: #f5f5f5;
+  padding: 2em;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 2em;
+}
+
+#hack-club h2 {
+  color: #031c40;
+}
+
+#hack-club a {
+  
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#hack-club a:hover {
+  text-decoration: underline;
+}
