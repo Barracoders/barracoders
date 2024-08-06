@@ -156,6 +156,7 @@ section {
         grid-template-columns: 1fr;
     }
 }
+
 footer {
   background-color: #031c40;
   color: #a6aeb0;
@@ -163,6 +164,9 @@ footer {
   padding: 1em 0;
   position: relative;
   width: 100%;
+}
+footer p {
+  font-size: 20px;
 }
 
 footer a {

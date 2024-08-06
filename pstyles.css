@@ -117,3 +117,6 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+footer p {
+  font-size: 20px;
+}

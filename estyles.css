@@ -129,3 +129,6 @@ footer a:hover {
   border: 1px solid #ddd;
   margin-bottom: 2em;
 }
+footer p {
+  font-size: 20px;
+}
