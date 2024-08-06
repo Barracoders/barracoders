@@ -204,3 +204,7 @@ footer a:hover {
   border-radius: 4px;
   font-weight: bold;
 }
+
+footer p {
+  font-size: 20px;
+}
