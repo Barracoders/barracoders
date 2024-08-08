@@ -1,102 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link
-      rel="icon"
-      href="logo.png"
-      type="image/icon type"
-    />
+    <link rel="icon" href="logo.png" type="image/icon type" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Beachside - Events</title>
     <link rel="stylesheet" href="estyles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
   </head>
   <body>
     <nav>
       <div class="logo">
-        <a href="index.html"><img
-          src="logo.png"
-         
-        /></a>
+        <a href="index.html"><img src="logo.png" alt="Logo" /></a>
       </div>
       <ul>
-        <li><a href="index.html#">Home</a></li>
-
-        <li>
-          <a
-            href="bylaws.pdf"
-            >Bylaws</a
-          >
-        </li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="bylaws.pdf">Bylaws</a></li>
         <li><a href="resources.html">Resources</a></li>
         <li><a href="projects.html">Projects</a></li>
       </ul>
     </nav>
-     <header>
-        <h1>Calendar</h1>
+    <header>
+      <h1>Calendar</h1>
     </header>
     <main>
-      <section id="big-container">
-        <section id="events">
-            <h2>Upcoming Events</h2>
-            <div class="events-grid">
-                <div class="event-item">
-                    <img src="Coming_Soon.png" alt="Event 1">
-                    <h3>Interest Meeting</h3>
-                    <p>We will be hosting an informational meeting to outline our exciting plans for the year and to inspire new members to join our club.</p><p>
-                  <strong>Date: TBD</strong>
-                  </p>
-                    <div class="event-files">
-                        <a href="bylaws.pdf" target="_blank">Download Bylaws</a>
-                      <a href="AUP.pdf" target="_blank">Download AUP</a>
-                        <a href="" target="_blank">Download Presentation</a>
-                    </div>
-                </div>
-                <div class="event-item">
-                    <img src="Coming_Soon.png" alt="Event 2">
-                    <h3>First Meeting</h3>
-                    <p>Join us for the first Barracoders meeting of the year, where we'll introduce ourselves and map out our exciting plans for the rest of the year.</p><p>
-                  <strong>Date: TBD</strong>
-                  </p>
-                    <div class="event-files">
-                        <a href="" target="_blank">Download Presentation</a>
-                    </div>
-                </div>
-              <div class="event-item">
-                <img src="Coming_Soon.png" alt="Event 2"> 
-                    <h3>Beachside Barracoders 1st Schoolwide Hackathon</h3>
-                    <p>Join us for the first ever Beachside Schoolwide Hackathon run by the Barracoders Club!</p><p>
-                <strong>Date: February 18th - February 25th</strong></p>
-                    <div class="event-files">
-                        <a href="hackathon.html" target="_blank">View More Details</a>
-                        <a href="/hackathon-docs/Hackathon-Proposal.pdf" target="_blank">Download Proposal</a>
-                        
-                    </div>
-                </div>
-                <!-- <div class="event-item">
-                    <img src="event3.jpg" alt="Event 3">
-                    <h3>Event Title 3</h3>
-                    <p></p>
-                    <div class="event-files">
-                        <a href="file1.pdf" target="_blank">Download File 1</a>
-                        <a href="file2.pdf" target="_blank">Download File 2</a>
-                        <a href="file3.pdf" target="_blank">Download File 3</a>
-                    </div>
-                </div> -->
-               
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for events..." />
+        <div class="filter-container">
+          <label><input type="checkbox" class="filter" value="upcoming" /> Upcoming</label>
+          <label><input type="checkbox" class="filter" value="past" /> Past</label>
+          <label><input type="checkbox" class="filter" value="special" /> Special Meetings/Events</label>
+        </div>
+      </div>
+      <section id="events">
+        <h2>Upcoming Meetings</h2>
+        <div class="events-grid">
+          <div class="event-item" data-category="upcoming">
+            <img src="Coming_Soon.png" alt="Event 1" />
+            <h3>Interest Meeting</h3>
+            <p>
+              We will be hosting an informational meeting to outline our exciting plans for the year and to inspire new members to join our club.
+            </p>
+            <p><strong>Date: TBD</strong></p>
+            <div class="event-files">
+              <a href="bylaws.pdf" target="_blank">Download Bylaws</a>
+              <a href="AUP.pdf" target="_blank">Download AUP</a>
+              <a href="" target="_blank">Download Presentation</a>
             </div>
-        </section>
-        </section>
+          </div>
+          <div class="event-item" data-category="upcoming">
+            <img src="Coming_Soon.png" alt="Event 2" />
+            <h3>First Meeting</h3>
+            <p>
+              Join us for the first Barracoders meeting of the year, where we'll introduce ourselves and map out our exciting plans for the rest of the year.
+            </p>
+            <p><strong>Date: TBD</strong></p>
+            <div class="event-files">
+              <a href="" target="_blank">Download Presentation</a>
+            </div>
+          </div>
+          <div class="event-item" data-category="upcoming">
+            <img src="Coming_Soon.png" alt="Event 3" />
+            <h3>Beachside Barracoders 1st Schoolwide Hackathon</h3>
+            <p>
+              Join us for the first ever Beachside Schoolwide Hackathon run by the Barracoders Club!
+            </p>
+            <p><strong>Date: February 18th - February 25th</strong></p>
+            <div class="event-files">
+              <a href="hackathon.html" target="_blank">View More Details</a>
+              <a href="/hackathon-docs/Hackathon-Proposal.pdf" target="_blank">Download Proposal</a>
+            </div>
+          </div>
+        </div>
+        <h2>Past Meetings</h2>
+        <div class="events-grid"></div>
+      </section>
+      <script>
+        const searchInput = document.getElementById("searchInput");
+        const eventsGrid = document.querySelectorAll(".events-grid")[0];
+        const filterCheckboxes = document.querySelectorAll(".filter");
+
+        searchInput.addEventListener("input", filterEvents);
+        filterCheckboxes.forEach((checkbox) =>
+          checkbox.addEventListener("change", filterEvents)
+        );
+
+        function filterEvents() {
+          const searchText = searchInput.value.toLowerCase();
+          const selectedFilters = Array.from(filterCheckboxes)
+            .filter((checkbox) => checkbox.checked)
+            .map((checkbox) => checkbox.value.toLowerCase());
+
+          const events = eventsGrid.querySelectorAll(".event-item");
+          events.forEach((event) => {
+            const matchesSearch = event.textContent
+              .toLowerCase()
+              .includes(searchText);
+            const matchesFilter =
+              selectedFilters.length === 0 ||
+              selectedFilters.some((filter) =>
+                event.dataset.category.toLowerCase().includes(filter)
+              );
+
+            if (matchesSearch && matchesFilter) {
+              event.style.display = "block";
+            } else {
+              event.style.display = "none";
+            }
+          });
+        }
+      </script>
     </main>
+    
     <footer>
       <p>
         &copy; 2024
         <a href="https://www-bhs.stjohns.k12.fl.us/">Beachside Highschool</a>.
-        Created by the <a href="Untitled_design.png" style="text-decoration: none; color: inherit;">Beachside Barracoders</a>.
+        Created by the
+        <a href="Untitled_design.png" style="text-decoration: none; color: inherit"
+          >Beachside Barracoders</a
+        >.
       </p>
       <p>
-        <a href="https://github.com/Barracoders/barracoders" style="text-decoration: none; color: #a6aeb0;"><i class="fa-brands fa-github" ></i> Proudly Open-Source</a> 
+        <a
+          href="https://github.com/Barracoders/barracoders"
+          style="text-decoration: none; color: #a6aeb0"
+          ><i class="fa-brands fa-github"></i> Proudly Open-Source</a
+        >
       </p>
     </footer>
   </body>
