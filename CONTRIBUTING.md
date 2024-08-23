@@ -2,7 +2,8 @@
 Thank you for your interest in contributing to our club's website! Your contributions help us maintain and improve the site for everyone. Please follow the guidelines below to ensure a smooth contribution process.
 
 ## How to Contribute
-Fork the Repository: Start by forking the repository to your own GitHub account. This allows you to make changes in your own copy of the repository.
+### Fork the Repository: 
+Start by forking the repository to your own GitHub account. This allows you to make changes in your own copy of the repository.
 
 ### Create a Branch: 
 Create a new branch from the main branch in your forked repository. Name the branch according to the feature or bugfix you're working on (e.g., add-contact-form, fix-header-issue).
