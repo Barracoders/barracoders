@@ -237,7 +237,20 @@ footer a:hover {
   text-decoration: none;
   font-weight: bold;
 }
+.alert-box {
+  background-color: grey;
+  color: white; 
+  padding: 1em;
+  text-align: center;
+  border-radius: 4px;
+  margin-bottom: 1em;
+  font-weight: bold;
+}
 
+.alert-box a {
+  color: white;
+  text-decoration: underline;
+}
 
 
 
