@@ -252,5 +252,22 @@ footer a:hover {
   text-decoration: underline;
 }
 
+.image-wrapper {
+  margin-left: 2px; /* Adjust for spacing from the left edge */
+  margin-top: 5px; /* Adjust for spacing underneath the navbar */
+}
 
+.responsive-image {
+  width: 560px;
+  height: 315px;
+  max-width: 100%;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .responsive-image {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+  }
+}
 
