@@ -5,9 +5,11 @@ body {
   background-color: white;
   color: #031c40;
 }
-p{
+
+p {
   font-size: 20px;
 }
+
 nav {
   background-color: #031c40;
   padding: 1em;
@@ -28,7 +30,7 @@ nav ul {
 }
 
 nav ul li {
-  margin: 0 .5em;
+  margin: 0 0.5em;
 }
 
 nav ul li a {
@@ -48,44 +50,39 @@ main {
   padding: 2em;
 }
 
-section {
-  margin-bottom: 2em;
-}
-
-.projects-grid {
+.students-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1em;
 }
 
-.project-item {
+.student-item {
   border: 1px solid #031c40;
-    border-radius: 8px;
-    padding: 1em;
-    background-color: #e0e0e0;
+  border-radius: 8px;
+  padding: 1em;
+  background-color: #e0e0e0;
 }
 
-
-.project-item img {
+.student-item img {
   max-width: 100%;
   border-radius: 8px;
 }
 
-.project-item h3 {
+.student-item h3 {
   margin-top: 0.5em;
 }
 
-.project-item p {
+.student-item p {
   text-align: justify;
 }
 
-.more-button {
+.portfolio-button {
   display: flex;
   justify-content: center;
   margin-top: 1em;
 }
 
-.more-button a {
+.portfolio-button a {
   padding: 0.5em 1em;
   background-color: #64b242;
   color: white;
@@ -94,19 +91,17 @@ section {
   font-weight: bold;
 }
 
-
 @media (max-width: 768px) {
-  .projects-grid {
+  .students-grid {
     grid-template-columns: 1fr;
   }
 }
+
 footer {
   background-color: #031c40;
   color: #a6aeb0;
   text-align: center;
   padding: 1em 0;
-  position: relative;
-  width: 100%;
 }
 
 footer a {
@@ -117,6 +112,7 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
 footer p {
   font-size: 20px;
 }
