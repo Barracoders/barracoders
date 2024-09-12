@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-Supports all broswers both moblie and desktop.
+Supports all broswers both mobile and desktop.
 
 | Version | Supported          |
 | ------- | ------------------ |
