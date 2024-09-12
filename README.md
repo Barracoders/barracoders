@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d922b658-8743-4aba-bc27-34487fdf51c7/deploy-status)](https://app.netlify.com/sites/barracoders/deploys)
 # Welcome to the Barracoder's Website Repository
 Welcome to the Barracoders Website repository! The Beachside Barracoders is a vibrant school coding club where students come together to explore the exciting world of computer programming. Whether you're a beginner or an advanced coder, our members collaborate on various projects, learn new coding languages, and participate in competitions. Our focus is on creativity, teamwork, and innovation, providing a supportive environment that encourages skill development and fun.
 
