@@ -77,12 +77,7 @@ main {
   gap: 0; /* Remove any gap between images */
 }
 
-.photo-gallery img {
-  flex: 1 1 calc(33.333% - 0px); /* Set the images to take up equal width */
-  max-width: calc(33.333% - 0px);
-  height: auto; /* Ensure the height adjusts based on the image's aspect ratio */
-  object-fit: cover;
-}
+
 
 @media (max-width: 768px) {
   .photo-gallery img {
@@ -96,10 +91,18 @@ main {
   }
 }
 
-
+.photo-gallery img {
+  flex: 1 1 calc(33.333% - 0px);
+  max-width: calc(33.333% - 0px);
+  height: auto;
+  object-fit: cover;
+  outline: 2px solid #031c40; /* Add the outline to the images */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
 
 .photo-gallery img:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Slightly enlarge the image on hover */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
 }
 
 footer {
