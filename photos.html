@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link
-  rel="icon"
-  href="images/logo.png"
-  type="image/icon type"
-/>
+    <link rel="icon" href="images/logo.png" type="image/icon type" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <title>Barracoders - Photo Gallery</title>
     <link rel="stylesheet" href="styles/photos.css" />
   </head>
   <body>
     <nav>
       <div class="logo">
-        <a href="index.html"><img
-          src="images/logo.png"
-         
-        /></a>
+        <a href="index.html"><img src="images/logo.png" alt="Logo" /></a>
       </div>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -27,12 +23,12 @@
         <li><a href="portfolios.html">Portfolios</a></li>
       </ul>
     </nav>
+
     <header>
       <h1>Photo Gallery</h1>
     </header>
-    <main>
-      
-      <section id="hack-club">
+
+     <main>
       <section id="gallery">
         <h2>Our Photos</h2>
         <div class="photo-gallery">
@@ -47,8 +43,8 @@
           <img src="/images/logo.png" alt="Photo 9" />
         </div>
       </section>
-        </section>
     </main>
+
     <footer>
       <p>
         &copy; 2024
@@ -56,8 +52,20 @@
         Created by the <a href="/images/julien_jumpscare.png" style="text-decoration: none; color: inherit;">Beachside Barracoders</a>.
       </p>
       <p>
-        <a href="https://github.com/Barracoders/barracoders" style="text-decoration: none; color: #a6aeb0;"><i class="fa-brands fa-github" ></i> Proudly Open-Source</a> 
+        <a
+          href="https://github.com/Barracoders/barracoders"
+          style="text-decoration: none; color: #a6aeb0;"
+          ><i class="fa-brands fa-github"></i> Proudly Open-Source</a
+        >
       </p>
     </footer>
+
+    <div id="lightbox" class="lightbox">
+      <span class="close">&times;</span>
+      <img class="lightbox-content" id="lightbox-img" />
+      <div id="caption"></div>
+    </div>
+
+    <script src="js/photos.js"></script>
   </body>
 </html>
