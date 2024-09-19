@@ -72,16 +72,30 @@ main {
 }
 
 .photo-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0; /* Remove any gap between images */
 }
 
 .photo-gallery img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+  flex: 1 1 calc(33.333% - 0px); /* Set the images to take up equal width */
+  max-width: calc(33.333% - 0px);
+  height: auto; /* Ensure the height adjusts based on the image's aspect ratio */
+  object-fit: cover;
 }
+
+@media (max-width: 768px) {
+  .photo-gallery img {
+    flex: 1 1 calc(50% - 0px); /* Two images per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-gallery img {
+    flex: 1 1 100%; /* One image per row on very small screens */
+  }
+}
+
 
 
 .photo-gallery img:hover {
