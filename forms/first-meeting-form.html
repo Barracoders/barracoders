@@ -76,7 +76,10 @@ form button:hover {
     <main>
 <section id="contact">
   
-  <form name="barracoders-survey" netlify>
+  <form name="barracoders-first-meeting-survey" netlify>
+    <h2>
+      About You
+    </h2>
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required>
 
@@ -86,8 +89,8 @@ form button:hover {
     <label for="exciting-thing">Most Exciting Thing This Year in Barracoders:</label>
     <textarea id="exciting-thing" name="exciting-thing" required></textarea>
 
-    <label for="favorite-language">Favorite Programming Language:</label>
-    <select id="favorite-language" name="favorite-language" required>
+    <label for="what-language">What Programming Language do you want to learn?</label>
+    <select id="what-language" name="what-language" required>
       <option value="" disabled selected>Select your language</option>
       <option value="JavaScript">JavaScript</option>
       <option value="HTML/CSS">HTML/CSS</option>
@@ -102,7 +105,27 @@ form button:hover {
 
     <label for="goal">#1 Goal This Year in Barracoders:</label>
     <textarea id="goal" name="goal" required></textarea>
-
+    <h2>
+      Club Functions (Optional)
+    </h2>
+    <label for="halloween">Would you be interes in a Barracoders Halloween Party?</label>
+    <select id="halloween" name="halloween">
+      <option value="" disabled selected>Select your Option</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+      <option value="Maybe">Maybe</option>
+    </select>
+    
+<label for="help">Do you know HTML and Would you Interest in running this website?</label>
+    <select id="help" name="help">
+      <option value="" disabled selected>Select your Option</option>
+      <option value="Yes/Yes">Yes I know HTML, Yes I would like to help</option>
+      <option value="Yes/No">Yes I know HTML, No I don't want to help</option>
+      <option value="No/Yes">No I don't know HTML, Yes I would like to help</option>
+      <option value="No/No">No I don't know HTML, No I don't want to help</option>
+    </select>
+    <label for="feedback">Any Feedback about the club so far?</label>
+    <textarea id="feedback" name="feedback" required></textarea>
     <button type="submit">Submit</button>
   </form>
 </section>
