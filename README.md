@@ -16,4 +16,4 @@ Stay connected with us through our online presence:
 <a href="https://www.youtube.com/@bhs_barracoders">Youtube</a>
 
 # Contributing
-If you'd like to contribute to the Barracoders website, please refer to our <a href="/CONTRIBUTING.md">Contributing Guide</a> for instructions on how to get started. We welcome contributions from all members who want to help us improve our Website!
+If you'd like to contribute to the Barracoders website, please refer to our <a href="/github-files/CONTRIBUTING.md">Contributing Guide</a> for instructions on how to get started. We welcome contributions from all members who want to help us improve our Website!
