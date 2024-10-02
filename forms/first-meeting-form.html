@@ -149,5 +149,12 @@ form button:hover {
         <a href="https://github.com/Barracoders/barracoders" style="text-decoration: none; color: #a6aeb0;"><i class="fa-brands fa-github" ></i> Proudly Open-Source</a> 
       </p>
     </footer>
+    <script>
+      document.addEventListener('keydown', function(event) {
+          if (event.ctrlKey && event.altKey && event.key === 'x') {
+              window.open('/dev-tools/directory.html', '_blank');  
+          }
+      });
+  </script>
   </body>
 </html>

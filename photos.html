@@ -59,7 +59,13 @@
         >
       </p>
     </footer>
-
+    <script>
+      document.addEventListener('keydown', function(event) {
+          if (event.ctrlKey && event.altKey && event.key === 'x') {
+              window.open('/dev-tools/directory.html', '_blank');  
+          }
+      });
+  </script>
     <div id="lightbox" class="lightbox">
       <span class="close">&times;</span>
       <img class="lightbox-content" id="lightbox-img" />

@@ -101,5 +101,12 @@
         </ul>
       </div>
   </div>
+  <script>
+    document.addEventListener('keydown', function(event) {
+        if (event.ctrlKey && event.altKey && event.key === 'x') {
+            window.open('/dev-tools/directory.html', '_blank');  
+        }
+    });
+</script>
 </body>
 </html>

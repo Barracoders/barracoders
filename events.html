@@ -145,6 +145,13 @@
       
       </section>
       <script>
+        document.addEventListener('keydown', function(event) {
+            if (event.ctrlKey && event.altKey && event.key === 'x') {
+                window.open('/dev-tools/directory.html', '_blank');  
+            }
+        });
+    </script>
+      <script>
         const searchInput = document.getElementById("searchInput");
         const eventsGrid = document.querySelectorAll(".events-grid")[0];
         const filterCheckboxes = document.querySelectorAll(".filter");
