@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Activity Tracker</title>
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f9f0; 
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    color: #2d6a4f;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #d8f3dc; 
+    border: 1px solid #95d5b2; 
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+li:hover {
+    background-color: #b7e4c7; 
+    transform: scale(1.02); 
+}
+
+a {
+    color: #1b4332; 
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#commit-list {
+    max-width: 800px;
+    margin: 0 auto; 
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <h1>Barracoders Github Track</h1>
+    <ul id="commit-list"></ul>
+    <script>
+        const username = 'your-github-username';
+        const repo = 'your-repo-name';
+
+        async function fetchCommits() {
+            const url = `https://api.github.com/repos/Barracoders/barracoders/commits`;
+
+            try {
+                const response = await fetch(url);
+                const commits = await response.json();
+                displayCommits(commits);
+            } catch (error) {
+                console.error('Error fetching commits:', error);
+            }
+        }
+
+        function displayCommits(commits) {
+            const commitList = document.getElementById('commit-list');
+            commitList.innerHTML = '';  
+
+            commits.forEach(commit => {
+                const listItem = document.createElement('li');
+                
+                
+                const link = document.createElement('a');
+                link.href = commit.html_url;
+                link.target = '_blank'; 
+                link.textContent = `${commit.commit.author.name}: ${commit.commit.message}`;
+
+                
+                listItem.appendChild(link);
+                
+                
+                commitList.appendChild(listItem);
+            });
+        }
+
+        fetchCommits();
+    </script>
+</body>
+</html>
