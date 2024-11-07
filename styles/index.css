@@ -45,6 +45,35 @@ header {
   padding: 2em 0;
 }
 
+.sponsor-section {
+  margin-top: 1em;
+}
+
+.sponsor-section p {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.sponsor-logos {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.sponsor-logos img {
+  width: 250px;
+  height: auto;
+  border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  .sponsor-logos img {
+    width: 120px;
+  }
+}
+
 main {
   padding: 2em;
 }
