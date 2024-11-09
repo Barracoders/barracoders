@@ -3,10 +3,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function updateCountdown() {
         const now = new Date();
+
         const timeDiff = revealDate - now;
+
         const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+
         const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
         const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+        
         const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
 
         document.getElementById('countdown-timer').innerText =

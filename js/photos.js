@@ -1,3 +1,4 @@
+//i need to work on this and make it actually function better lol
 document.querySelectorAll('.photo-gallery img').forEach((img) => {
     img.addEventListener('click', function () {
       const popup = document.createElement('div');
@@ -7,7 +8,7 @@ document.querySelectorAll('.photo-gallery img').forEach((img) => {
       popup.appendChild(popupImage);
       document.body.appendChild(popup);
   
-      // Close the popup on click
+      
       popup.addEventListener('click', function () {
         popup.remove();
       });
