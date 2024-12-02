@@ -1,34 +1,9 @@
-
-footer {
-  background-color: #031c40;
-  color: #a6aeb0;
-  text-align: center;
-  padding: 1em 0;
-  position: relative;
-  width: 100%;
-}
-footer p {
-  font-size: 20px;
-}
-
-footer a {
-  color: #64b242;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
 body {
   font-family: Arial, sans-serif;
-  margin: 0; 
+  margin: 0;
   padding: 0;
   background-color: #f0f0f0;
   color: #031c40;
-}
-
-p {
-  font-size: 20px;
 }
 
 nav {
@@ -72,37 +47,23 @@ main {
 }
 
 .photo-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0; /* Remove any gap between images */
-}
-
-
-
-@media (max-width: 768px) {
-  .photo-gallery img {
-    flex: 1 1 calc(50% - 0px); /* Two images per row on smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .photo-gallery img {
-    flex: 1 1 100%; /* One image per row on very small screens */
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Automatically adjust to screen size */
+  gap: 1em; /* Space between images */
 }
 
 .photo-gallery img {
-  flex: 1 1 calc(33.333% - 0px);
-  max-width: calc(33.333% - 0px);
-  height: auto;
+  width: 100%;
+  height: 200px; 
   object-fit: cover;
-  outline: 2px solid #031c40; /* Add the outline to the images */
-  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+  border-radius: 10px; /* Add rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
 }
 
 .photo-gallery img:hover {
   transform: scale(1.05); /* Slightly enlarge the image on hover */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
 }
 
 footer {
@@ -110,7 +71,6 @@ footer {
   color: #a6aeb0;
   text-align: center;
   padding: 1em 0;
-  width: 100%;
 }
 
 footer p {
@@ -126,6 +86,7 @@ footer a:hover {
   text-decoration: underline;
 }
 
+/* Mobile responsiveness */
 @media (max-width: 768px) {
   .photo-gallery {
     gap: 1.5em;
@@ -137,7 +98,3 @@ footer a:hover {
     gap: 1em;
   }
 }
-
-
-
-

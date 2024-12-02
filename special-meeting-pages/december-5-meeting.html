@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sprig Workshop</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      color: #333;
+    }
+    pre, code {
+      background-color: #f4f4f4;
+      color: #333;
+      padding: 10px;
+      border-radius: 5px;
+      font-family: 'Courier New', monospace;
+      overflow-x: auto;
+    }
+    pre {
+      margin: 20px 0;
+    }
+    .example {
+      margin-bottom: 20px;
+      padding: 15px;
+      border-left: 4px solid #007BFF;
+      background: #eef6ff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to the Sprig Workshop!</h1>
+  <p>Sprig is a fun and powerful tool for building tile-based games using JavaScript. Developed by Hack Club, it combines coding, art, and music into one editor. Create games and share them in the community gallery—or aim for the coveted Sprig Console!</p>
+ 
+  <h3>Quick Resources</h3>
+  <p>Heres some quick resources to help with the sprig!</p>
+  <ul>
+    <li><a href="https://sprig.hackclub.com/~">Sprig Editor</a></li>
+    <li><a href="https://sprig.hackclub.com/gallery">Sprig Gallery</a></li>
+    <li><a href="https://hackclub.slack.com/">join the #sprig and #barracoders Slack Channel</a></li>
+  </ul>
+<h2><a href="https://workshops.hackclub.com/sprig_first_game/">Click Here for The Beginner Workshop</a></h2>
+  <p>Happy coding! 🎮 The possibilities are endless with Sprig—go make something amazing!</p>
+  <h2>Getting Started</h2>
+  <p>Follow these steps to create an account and save your work:</p>
+  <ol>
+    <li>Click <strong>Log In</strong> at the top right of the Sprig editor.</li>
+    <li>Enter your email and check for a verification code.</li>
+    <li>Enter the code to activate your account.</li>
+  </ol>
+  <p>To prevent losing your work, save your files regularly. You can also download them as <code>.js</code> files for local backup.</p>
+
+  <h2>The Toolkit</h2>
+  <p>Sprig games are built on grids of tiles, and you can define behavior, visuals, and interactivity. Below is a breakdown of the key functions with examples:</p>
+
+  <h3>Define Sprites and Maps</h3>
+  <p>Sprites are the visual elements in your game, like the player and walls. You define them using a "legend" with unique keys for each sprite.</p>
+  <div class="example">
+    <pre><code>// Define sprites with unique keys
+const player = "p"; // Player sprite
+const wall = "w";   // Wall sprite
+
+// Set up the sprite legend
+setLegend(
+  [player, bitmap
+    ..... 
+    .000.
+    .0.0.
+    .000.
+    .....],
+  [wall, bitmap
+    ..... 
+    .111.
+    .111.
+    .111.
+    .....]
+);
+
+// Set the game background
+setBackground(wall); // Uses the wall sprite as the background
+
+// Create a map for the game
+const level = map
+  wwwww
+  w...w
+  w.p.w
+  w...w
+  wwwww
+;
+
+// Apply the map
+setMap(level);
+
+// Make sprites solid to prevent overlap
+setSolids([player, wall]);
+</code></pre>
+  </div>
+
+  <h3>Handle User Input</h3>
+  <p>Sprig uses keyboard inputs to control sprites. Common controls include <code>w, a, s, d</code> for directional movement and <code>i, j, k, l</code> for alternative directions.</p>
+  <div class="example">
+    <pre><code>// Move the player
+onInput("w", () => {
+  const sprite = getFirst(player); // Find the player sprite
+  sprite.y -= 1; // Move up
+});
+onInput("s", () => {
+  const sprite = getFirst(player);
+  sprite.y += 1; // Move down
+});
+onInput("a", () => {
+  const sprite = getFirst(player);
+  sprite.x -= 1; // Move left
+});
+onInput("d", () => {
+  const sprite = getFirst(player);
+  sprite.x += 1; // Move right
+});
+
+// Check game state after input
+afterInput(() => {
+  const tiles = tilesWith(wall, player); // Check if player is on a wall
+  if (tiles.length > 0) {
+    console.log("Game Over!");
+  }
+});
+</code></pre>
+  </div>
+
+  <h3>Add Music and Sound Effects</h3>
+  <p>Sprig includes a built-in sound engine to add background music or sound effects to your game. Use the <code>tune</code> function to create melodies.</p>
+  <div class="example">
+    <pre><code>// Create a short melody
+const melody = tune
+  500: c4~500,
+  500: d4~500,
+  500: e4~500;
+
+// Play the tune once
+playTune(melody);
+
+// Play in a loop
+const playback = playTune(melody, Infinity);
+
+// Stop the music
+playback.end();
+</code></pre>
+  </div>
+
+  <h3>Advanced: Dynamic Level Switching</h3>
+  <p>Switch between multiple levels using user input. This allows you to create a game with several stages or levels that can be accessed during gameplay.</p>
+  <div class="example">
+    <pre><code>// Define multiple levels
+const levels = [
+  map
+    wwwww
+    w...w
+    w.p.w
+    w...w
+    wwwww
+  ,
+  map
+    wwwww
+    w.p.w
+    www.w
+    w...w
+    wwwww
+];
+
+// Start with the first level
+let currentLevel = 0;
+setMap(levels[currentLevel]);
+
+// Switch levels on player input
+onInput("i", () => {
+  currentLevel = (currentLevel + 1) % levels.length; // Cycle levels
+  setMap(levels[currentLevel]); // Load the next level
+});
+</code></pre>
+  </div>
+
+
+  <p>Happy coding! 🎮 The possibilities are endless with Sprig—go make something amazing!</p>
+</body>
+</html>

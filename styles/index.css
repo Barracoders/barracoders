@@ -300,3 +300,29 @@ footer a:hover {
   }
 }
 
+.workshop-details {
+  background-color: #e0e0e0;
+  padding: 1em;
+  border: 1px solid #031c40;
+  border-radius: 8px;
+  margin-bottom: 2em;
+}
+
+ol {
+  list-style-type: decimal;
+  margin-left: 1em;
+}
+
+.resource-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.resource-list li a {
+  text-decoration: none;
+  color: #64b242;
+  font-weight: bold;
+}
