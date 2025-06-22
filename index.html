@@ -9,7 +9,6 @@
     <meta property="og:description" content="The official website of the Beachside High School Coding Club.">
     <meta property="og:image" content="images/logo.png">
     <meta property="og:url" content="https://barracoders.com">
-    <meta name="twitter:card" content="summary_large_image"> <!--dont want to sound like a nerd but isnt it supposed to be x?-->
 
     <title>Barracoders - Home</title>
     <link rel="icon" href="images/logo.png" type="image/icon type">
@@ -18,16 +17,15 @@
 </head>
 
 <body>
-    <!-- Navigation -->
     <nav>
         <div class="logo">
             <a href="index.html"><img src="images/logo.png" alt="Barracoders Logo"></a>
         </div>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="docs/Bylaws.pdf">Bylaws</a></li>
-            <li><a href="resources.html">Resources</a></li>
-            <li><a href="portfolios.html">Portfolios</a></li>
+            <li><a href="#"><s>Bylaws</s></a></li>
+            <li><a href="#"><s>Photos</s></a></li>
+            <li><a href="#"><s>Calendar</s></a></li>
         </ul>
     </nav>
 
@@ -49,10 +47,7 @@
         </div>
     </header>
 
-    <!-- Alert Box -->
-    <div class="alert-box">
-        <p><a href="https://forms.fillout.com/t/cJZSX24Rmfus">Vote for next years officers here!!</a>
-    </div>
+
 
     <!-- Main Content -->
     <main>
@@ -69,40 +64,14 @@
             <h2>Find Us Here:</h2>
             <section id="social">
                 <div class="social-links">
-                    <a href="events.html" class="social-container"><i class="fa-regular fa-calendar social-icon"></i>Events/Meetings</a>
+                    
                     <a href="https://www.instagram.com/bhs_barracoders/" class="social-container"><i class="fab fa-instagram social-icon"></i>Instagram</a>
                     <a href="https://github.com/Barracoders" class="social-container"><i class="fa-brands fa-github social-icon"></i>Github</a>
-                    <a href="https://hcb.hackclub.com/donations/start/beachside-barracoders" class="social-container"><i class="fa-regular fa-heart social-icon"></i>Donate</a>
-                    <a href="https://join.slack.com/t/barracodersworkspace/shared_invite/zt-2sp69sjz6-wkpAtzAggXqGsZFcgcUmpw" class="social-container"><i class="fab fa-slack social-icon"></i>Slack</a>
                 </div>
             </section>
         </section>
 
-        <!-- Events Section -->
-        <section id="events">
-            <h2>Upcoming Events</h2>
-            <div class="events-grid">
-                <div class="event-item">
-                    <h3>Sprig Workshop #1</h3>
-                    <p><strong>Date: 12/5 @ 4:00 pm</strong></p>
-                    <div class="event-files"><a href="/special-meeting-pages/december-5-meeting.html">Resources Page</a></div>
-                </div>
-                <div class="event-item">
-                    <h3>Sprig Workshop #2</h3>
-                    <p><strong>Date: 12/12 @ 4:00 pm</strong></p>
-                    <div class="event-files"><a href="/special-meeting-pages/december-5-meeting.html">Resources Page</a></div>
-                </div>
-                <div class="event-item">
-                    <h3>Holiday Party/Sprig Workshop #3</h3>
-                    <p><strong>Date: 12/19 @ 4:00 pm</strong></p>
-                    <div class="event-files"><a href="/special-meeting-pages/december-5-meeting.html">Resources Page</a></div>
-                </div>
-                
-            </div>
-            <div class="more-button">
-                <a href="events.html">View Full Calendar</a>
-            </div>
-        </section>
+       
 
         <!-- Photos Section -->
         <section id="photos">
@@ -118,16 +87,6 @@
         </section>
     </main>
 
-    <!-- Dev Tools Shortcut -->
-    <script>
-        document.addEventListener('keydown', function(event) {
-            if (event.ctrlKey && event.altKey && event.key === 'x') {
-                window.open('/dev-tools/directory.html', '_blank');
-            }
-        });
-    </script>
-
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 <a href="https://www-bhs.stjohns.k12.fl.us/">Beachside Highschool</a>. Created by the <a href="/images/julien_jumpscare.png">Beachside Barracoders</a>.</p>
         <p><a href="https://github.com/Barracoders/barracoders" style="text-decoration: none; color: #a6aeb0;"><i class="fa-brands fa-github"></i> Proudly Open-Source</a></p>
