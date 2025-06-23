@@ -1,83 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Beachside High School Coding Club Barracoders Website">
-    <meta name="keywords" content="Beachside, Coding, Coding Club, Barracoders, Beachside High Barracoders, School Coding Club">
-    <meta property="og:title" content="Beachside Barracoders - Home">
-    <meta property="og:description" content="The official website of the Beachside High School Coding Club.">
-    <meta property="og:image" content="images/logo.png">
-    <meta property="og:url" content="https://barracoders.com">
-
-    <title>Barracoders - Home</title>
-    <link rel="icon" href="images/logo.png" type="image/icon type">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="styles/index.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Beachside Barracoders</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="/styles/index.css" />
 </head>
-
 <body>
-    <nav>
-        <div class="logo">
-            <a href="index.html"><img src="images/logo.png" alt="Barracoders Logo"></a>
-        </div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#"><s>Bylaws</s></a></li>
-            <li><a href="#"><s>Photos</s></a></li>
-            <li><a href="#"><s>Calendar</s></a></li>
-        </ul>
+  <header>
+    <nav id="navbar">
+      <div class="nav-left">
+        <a href="/index.html"><img src="/images/coders_white_cropped.png" alt="Logo" id="logo-small" /></a>
+        <a href="/index.html">Home</a>
+        <a href="/calendar.html">Calendar</a>
+        <a href="/photos.html">Photos</a>
+      </div>
+      <div class="nav-right">
+        <button id="mode-toggle"><i class="fas fa-moon"></i></button>
+      </div>
     </nav>
+  </header>
 
-    <!-- Header -->
-    <header>
-        <img src="images/logo.png" alt="Beachside Barracoders Logo">
-        <h1>Welcome to the Beachside Barracoders Homepage</h1>
-        <div class="sponsor-section">
-            <p>Sponsored by</p>
-            <div class="sponsor-logos">
-                <a href="https://www.codeninjas.com/fl-world-golf-village">
-                    <img src="images/sponsers/code-ninjas.png" alt="Code Ninjas Logo">
-                </a>
-                <p>and</p>
-                <a href="https://hackclub.com">
-                    <img src="images/sponsers/hackclub.png" alt="Hack Club Logo">
-                </a>
-            </div>
-        </div>
-    </header>
-<div class="alert-box">
-        <p>🚧 This Website is Currently Under Construction 🚧</p>
+  <section id="hero">
+    <div class="logo-container">
+      <img id="main-logo" src="/images/coders_white_cropped.png" alt="Club Logo" />
     </div>
+    <div class="about">
+      <h2>About Us</h2>
+      <p>
+        The Beachside Barracoders is a vibrant school coding club where students
+        come together to explore the exciting world of computer programming.
+        Members of all skill levels collaborate on projects, learn new coding
+        languages, and participate in competitions. With a focus on creativity,
+        teamwork, and innovation, the Beachside Barracoders foster a supportive
+        environment that encourages students to develop their coding skills while
+        having fun.
+      </p>
 
+      <h2>Hack Club Affiliation</h2>
+      <p>
+        The Beachside Barracoders are proud members of Hack Club, a global
+        network of student-led coding clubs. Hack Club helps students learn to
+        code through hands-on projects and a supportive community.
+      </p>
+      <p>
+        We adhere to the Hack Club Code of Conduct to ensure a respectful and
+        inclusive environment for all members.
+      </p>
+      <p>
+        For more information about Hack Club, visit the
+        <a href="https://hackclub.com" target="_blank">Hack Club website</a>.
+      </p>
 
-    <main>
-        
-        <section class="hack-club">
-            <h2>About Us</h2>
-            <p>The Beachside Barracoders is a vibrant school coding club where students come together to explore the exciting world of computer programming. Members of all skill levels collaborate on projects, learn new coding languages, and participate in competitions. With a focus on creativity, teamwork, and innovation, the Beachside Barracoders foster a supportive environment that encourages students to develop their coding skills while having <a href="extra/tetris.html" style="text-decoration: none; color: inherit;">fun</a>.</p>
+      <div class="buttons">
+        <a href="#" class="icon-btn"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="icon-btn"><i class="fab fa-github"></i></a>
+        <a href="#" class="icon-btn"><i class="fas fa-link"></i></a>
+      </div>
+    </div>
+  </section>
 
-            <h2>Hack Club Affiliation</h2>
-            <p>The Beachside Barracoders are proud members of Hack Club, a global network of student-led coding clubs. Hack Club helps students learn to code through hands-on projects and a supportive community.</p>
-            <p>We adhere to the <a href="https://hackclub.com/conduct/" target="_blank" style="text-decoration: none; color: inherit;">Hack Club Code of Conduct</a> to ensure a respectful and inclusive environment for all members.</p>
-            <p>For more information about Hack Club, visit the <a href="https://hackclub.com/" target="_blank" style="text-decoration: none; color: inherit;">Hack Club website</a>.</p>
+  <section class="white-section"></section>
+  <section class="dark-section"></section>
 
-            <h2>Find Us Here:</h2>
-            <section id="social">
-                <div class="social-links">
-                    
-                    <a href="https://www.instagram.com/bhs_barracoders/" class="social-container"><i class="fab fa-instagram social-icon"></i>Instagram</a>
-                    <a href="https://github.com/Barracoders" class="social-container"><i class="fa-brands fa-github social-icon"></i>Github</a>
-                </div>
-            </section>
-        </section>
-    </main>
+  <footer>
+    <p>&copy; 2024 <a href="https://www-bhs.stjohns.k12.fl.us/">Beachside Highschool</a>. Created by the Beachside Barracoders </p>
+  </footer>
 
-    <footer>
-        <p>&copy; 2024 <a href="https://www-bhs.stjohns.k12.fl.us/">Beachside Highschool</a>. Created by the <a href="/images/julien_jumpscare.png">Beachside Barracoders</a>.</p>
-        <p><a href="https://github.com/Barracoders/barracoders" style="text-decoration: none; color: #a6aeb0;"><i class="fa-brands fa-github"></i> Proudly Open-Source</a></p>
-    </footer>
+  <script src="/js/index.js"></script>
 </body>
 </html>
-
-

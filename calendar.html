@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="images/logo.png" type="image/png" />
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Barracoders - Events</title>
-  <link rel="stylesheet" href="styles/calendar.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Beachside Barracoders - Calendar</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="/styles/index.css" />
 </head>
 <body>
- 
-  <nav>
-    <div class="logo">
-      <a href="index.html"><img src="images/logo.png" alt="Barracoders Logo" /></a>
-    </div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-  </nav>
-
-  
   <header>
-    <h1>Calendar</h1>
+    <nav id="navbar">
+      <div class="nav-left">
+        <a href="/index.html"><img src="/images/coders_white_cropped.png" alt="Logo" id="logo-small" /></a>
+        <a href="/index.html">Home</a>
+        <a href="/calendar.html">Calendar</a>
+        <a href="/photos.html">Photos</a>
+      </div>
+      <div class="nav-right">
+        <button id="mode-toggle"><i class="fas fa-moon"></i></button>
+      </div>
+    </nav>
   </header>
 
  
 
- 
+  <section class="white-section"></section>
+  <section class="dark-section"></section>
+
   <footer>
-    <p>&copy; 2024 <a href="https://www-bhs.stjohns.k12.fl.us/">Beachside High School</a>. Created by the <a href="/images/julien_jumpscare.png">Beachside Barracoders</a>.</p>
-    <p>
-      <a href="https://github.com/Barracoders/barracoders" target="_blank"><i class="fa-brands fa-github"></i> Proudly Open-Source</a>
-    </p>
+    <p>&copy; 2024 <a href="https://www-bhs.stjohns.k12.fl.us/">Beachside Highschool</a>. Created by the Beachside Barracoders </p>
   </footer>
 
-  
+  <script src="/js/index.js"></script>
 </body>
 </html>
