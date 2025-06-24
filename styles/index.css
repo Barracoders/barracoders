@@ -89,7 +89,7 @@ body {
 
 .about h2 {
   margin-top: 2.5rem;
-  text-align: center;
+  text-align: left;
   font-size: 1.8rem;
 }
 
@@ -98,7 +98,19 @@ body {
   text-decoration: underline;
 }
 
-/* Social Buttons */
+.sponsor-logos {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+.sponsor-logos img {
+  width: 250px;
+  height: auto;
+  border-radius: 5px;
+}
+
 .buttons {
   margin-top: 2rem;
   text-align: center;
@@ -120,6 +132,7 @@ body {
   height: 600px;
 }
 
+
 .dark-section {
   background: var(--dark);
   height: 600px;
@@ -138,4 +151,10 @@ footer {
 footer a {
   color: inherit;
   text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .sponsor-logos img {
+    width: 120px;
+  }
 }
