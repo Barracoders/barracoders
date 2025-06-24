@@ -8,15 +8,37 @@
   padding: 0;
   box-sizing: border-box;
 }
+body.light-mode {
+  --bg: white;
+  --text: #222;
+  --nav-bg: white;
+  --nav-text: var(--green);
+  --logo-src: url('/images/logos/logo-green-ver.png');
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: white;
-  color: #222;
+  --hero-color: var(--green);
 }
 
+body.dark-mode {
+  --bg: #1f374f;
+  --text: white;
+  --nav-bg: #111e2b;
+  --nav-text: white;
+  --logo-src: url('/images/logos/coders_white_cropped.png');
+
+  --hero-color: #1f374f;
+}
+
+body.light-mode,
+body.dark-mode {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+
 #navbar {
-  background-color: var(--green);
+  background-color: var(--nav-bg);
+  color: var(--nav-text);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,41 +51,37 @@ body {
   border-radius: 0; 
   transition: all 0.3s ease;
 }
-
 .nav-left {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-
 .nav-left a {
-  color: white;
+  color: var(--nav-text);
   text-decoration: none;
   font-weight: bold;
   font-size: 1.2rem;
 }
-
 #logo-small {
+  content: var(--logo-src);
   height: 0;
   transition: 0.3s ease;
   margin-right: 1rem;
 }
-
 #navbar.shrink #logo-small {
   height: 32px;
 }
-
 .nav-right button {
   background: none;
   border: none;
-  color: white;
+  color: var(--nav-text);
   font-size: 1.5rem;
   cursor: pointer;
 }
 
 
 #hero {
-  background-color: var(--green);
+  background-color: var(--hero-color);
   color: white;
   padding: 6rem 2rem 8rem;
   text-align: center;
@@ -140,9 +158,9 @@ body {
 
 
 footer {
-  background: var(--green);
+  background: var(--nav-bg);
   font-family: 'Segoe UI', sans-serif;
-  color: white;
+  color: var(--nav-text);
   text-align: center;
   padding: 2rem 1rem;
   font-size: 1rem;
