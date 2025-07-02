@@ -16,6 +16,7 @@ body.light-mode {
   --logo-src: url('/images/logos/logo-green-ver.png');
   --back-events-color: var(--green);
   --hero-color: var(--green);
+  --events-shadow: 0 4px 24px 0 rgba(33, 58, 43, 0.38);
 }
 
 body.dark-mode {
@@ -25,8 +26,8 @@ body.dark-mode {
   --nav-text: white;
   --back-events-color: var(--dark);
   --logo-src: url('/images/logos/coders_white_cropped.png');
-
   --hero-color: #1f374f;
+  --events-shadow: 0 4px 24px 0 rgba(10, 18, 32, 0.85); 
 }
 
 body.light-mode,
@@ -148,9 +149,9 @@ body.dark-mode {
 
 .calendar-section {
   background: var(--nav-bg);
-  background-image: url('/images/logos/calendar-bg.png'); /* Use your transparent image here */
+  background-image: url('/images/logos/watermarklighter.png'); 
   background-repeat: repeat;
-  background-size: 300px auto;
+  background-size: 4000px auto;
   background-position: center center;
   width: 100%;
   display: flex;
@@ -159,28 +160,38 @@ body.dark-mode {
   padding: 3rem 0 3rem 0;
   min-height: unset;
   height: auto;
-  transition: background-image 0.3s;
+  transition: background-image 0.2s;
 }
 body.light-mode .calendar-section {
   background: var(--nav-bg);
   background-image: url('/images/logos/watermarklighter.png');
   background-position: center center;
+  background-size: 4000px auto;
 }
 body.dark-mode .calendar-section {
   background: var(--nav-bg);
   background-image: url('/images/logos/watermarkdarker.png');
   background-position: center center;
+  background-size: 4000px auto;
 }
 @media (max-width: 900px) {
   .calendar-section {
     padding: 1.5rem 0;
-    background-size: 180px auto;
+    background-size: 120px auto;
+  }
+  body.light-mode .calendar-section,
+  body.dark-mode .calendar-section {
+    background-size: 120px auto;
   }
 }
 @media (max-width: 600px) {
   .calendar-section {
     padding: 0.5rem 0;
-    background-size: 100px auto;
+    background-size: 70px auto;
+  }
+  body.light-mode .calendar-section,
+  body.dark-mode .calendar-section {
+    background-size: 70px auto;
   }
 }
 
@@ -211,7 +222,7 @@ footer a {
   background: var(--back-events-color);
   color: var(--text);
   border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  box-shadow: var(--events-shadow);
   padding: 2.5rem 2rem 2rem;
   box-sizing: border-box;
 }
@@ -274,6 +285,7 @@ body.dark-mode .events-column h2 {
 }
 @media (max-width: 600px) {
   .events-column {
+    display: none;
     max-width: 100vw;
     padding: 1rem 0.2rem;
     border-radius: 0;
@@ -282,4 +294,16 @@ body.dark-mode .events-column h2 {
   .calendar-section {
     padding: 0.5rem 0;
   }
+}
+
+/* preload for light/dark mode */
+body:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+  background: url('/images/logos/watermarklighter.png') no-repeat -9999px -9999px, url('/images/logos/watermarkdarker.png') no-repeat -9999px -9999px;
 }
