@@ -41,3 +41,47 @@ const toggleButton = document.getElementById('mode-toggle');
       navbar.classList.remove('shrink');
     }
   });
+
+
+function formatEventDate(dateStr) {
+  const date = new Date(dateStr);
+  return date.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+}
+
+function isUpcoming(dateStr) {
+  const today = new Date();
+  today.setHours(0,0,0,0);
+  const eventDate = new Date(dateStr);
+  eventDate.setHours(0,0,0,0);
+  return eventDate >= today;
+}
+
+function renderEvents(events) {
+  const eventsList = document.getElementById('events-list');
+  if (!eventsList) return;
+  eventsList.innerHTML = '';
+  if (events.length === 0) {
+    eventsList.innerHTML = '<p>No upcoming events.</p>';
+    return;
+  }
+  events.slice(0, 5).forEach(event => {
+    const eventDiv = document.createElement('div');
+    eventDiv.className = 'event-card';
+    eventDiv.innerHTML = `
+      <div class="event-title">${event.title}</div>
+      <div class="event-date">${formatEventDate(event.date)} &bull; ${event.time}</div>
+      <div class="event-location">${event.location}</div>
+      ${event.description ? `<div class="event-desc">${event.description}</div>` : ''}
+      ${event.link ? `<a href="${event.link}" target="_blank" class="event-link">More Info</a>` : ''}
+    `;
+    eventsList.appendChild(eventDiv);
+  });
+}
+
+fetch('/calendar/events.json')
+  .then(res => res.json())
+  .then(data => {
+    const upcoming = data.filter(e => isUpcoming(e.date));
+    upcoming.sort((a, b) => new Date(a.date) - new Date(b.date));
+    renderEvents(upcoming);
+  });

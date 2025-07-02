@@ -14,7 +14,7 @@ body.light-mode {
   --nav-bg: white;
   --nav-text: var(--green);
   --logo-src: url('/images/logos/logo-green-ver.png');
-
+  --back-events-color: var(--green);
   --hero-color: var(--green);
 }
 
@@ -23,6 +23,7 @@ body.dark-mode {
   --text: white;
   --nav-bg: #111e2b;
   --nav-text: white;
+  --back-events-color: var(--dark);
   --logo-src: url('/images/logos/coders_white_cropped.png');
 
   --hero-color: #1f374f;
@@ -145,14 +146,46 @@ body.dark-mode {
   color: #e6ffe6;
 }
 
-.white-section {
-  background: white;
-  height: 600px;
+.calendar-section {
+  background: var(--nav-bg);
+  background-image: url('/images/logos/calendar-bg.png'); /* Use your transparent image here */
+  background-repeat: repeat;
+  background-size: 300px auto;
+  background-position: center center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 0 3rem 0;
+  min-height: unset;
+  height: auto;
+  transition: background-image 0.3s;
+}
+body.light-mode .calendar-section {
+  background: var(--nav-bg);
+  background-image: url('/images/logos/watermarklighter.png');
+  background-position: center center;
+}
+body.dark-mode .calendar-section {
+  background: var(--nav-bg);
+  background-image: url('/images/logos/watermarkdarker.png');
+  background-position: center center;
+}
+@media (max-width: 900px) {
+  .calendar-section {
+    padding: 1.5rem 0;
+    background-size: 180px auto;
+  }
+}
+@media (max-width: 600px) {
+  .calendar-section {
+    padding: 0.5rem 0;
+    background-size: 100px auto;
+  }
 }
 
-
 .dark-section {
-  background: var(--dark);
+  background: var(--hero-color);
   height: 600px;
 }
 
@@ -171,8 +204,82 @@ footer a {
   text-decoration: underline;
 }
 
+.events-column {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  background: var(--back-events-color);
+  color: var(--text);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 2.5rem 2rem 2rem;
+  box-sizing: border-box;
+}
+.events-column h2 {
+  text-align: left;
+  margin-bottom: 1.5rem;
+  color: var(--green);
+  font-size: 1.8rem;
+}
+body.light-mode .events-column h2 {
+  color: White;
+}
+body.dark-mode .events-column h2 {
+  color: var(--green);
+}
+#events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.event-card {
+  background: var(--nav-bg);
+  color: var(--nav-text);
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+  transition: background 0.3s, color 0.3s;
+}
+.event-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+.event-date {
+  font-size: 0.98rem;
+  color: var(--green);
+  margin-bottom: 0.2rem;
+}
+.event-location {
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+.event-desc {
+  font-size: 0.93rem;
+  margin-bottom: 0.2rem;
+}
+.event-link {
+  color: var(--green);
+  text-decoration: underline;
+  font-size: 0.95rem;
+}
+@media (max-width: 900px) {
+  .events-column {
+    max-width: 98vw;
+    padding: 1.5rem 0.5rem;
+  }
+  .calendar-section {
+    padding: 1.5rem 0;
+  }
+}
 @media (max-width: 600px) {
-  .sponsor-logos img {
-    width: 120px;
+  .events-column {
+    max-width: 100vw;
+    padding: 1rem 0.2rem;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .calendar-section {
+    padding: 0.5rem 0;
   }
 }
