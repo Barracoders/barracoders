@@ -4,41 +4,51 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Beachside Barracoders - Calendar</title>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
-  <link rel="stylesheet" href="/styles/index.css" />
-  <link
-      rel="icon"
-      href="images/logos/icon-logo.png"
-      type="image/icon type"
-    />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/styles/calendar.css" />
+  <link rel="icon" href="images/logos/icon-logo.png" type="image/icon type" />
 </head>
 <body>
   <header>
     <nav id="navbar">
       <div class="nav-left">
-        <a href="/index.html"><img src="/images/logos/coders_white_cropped.png" alt="Logo" id="logo-small" /></a>
-        <a href="/index.html">Home</a>
+        <a href="/index.html"><img src="/images/logos/logo-green-ver.png" alt="Logo" id="logo-small" style="height:32px;" /></a>
+        <a href="/docs/bylaws2024-25.pdf">Bylaws</a>
         <a href="/calendar.html">Calendar</a>
         <a href="/photos.html">Photos</a>
       </div>
       <div class="nav-right">
-        <button id="mode-toggle"><i class="fas fa-moon"></i></button>
+        <button id="mode-toggle"><i class="fas fa-moon" id="mode-icon"></i></button>
       </div>
     </nav>
   </header>
 
- 
-
-  <section class="white-section"></section>
-  <section class="dark-section"></section>
+  <section class="calendar-section">
+    <div class="events-column">
+      <div class="event-card">
+      <div class="events-heading-card"><h2>All Events</h2></div>
+      <div class="events-filter-bar-card">
+        <div class="events-filter-bar">
+          <input type="text" id="event-search" placeholder="Search events..." />
+          <select id="event-field">
+            <option value="all">All</option>
+            <option value="title">Title</option>
+            <option value="date">Date</option>
+            <option value="location">Location</option>
+            <option value="description">Description</option>
+          </select>
+        </div>
+      </div>
+      </div>
+      <br>
+      <div id="events-list"></div>
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; 2025 <a href="https://www-bhs.stjohns.k12.fl.us/">Beachside Highschool</a>. Created by the Beachside Barracoders </p>
+    <p>&copy; 2025 <a href="https://www-bhs.stjohns.k12.fl.us/">Beachside Highschool</a>. Created by the Beachside Barracoders. </p>
   </footer>
 
-  <script src="/js/index.js"></script>
+  <script src="/js/calendar.js"></script>
 </body>
 </html>

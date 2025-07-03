@@ -20,7 +20,7 @@ body.light-mode {
 }
 
 body.dark-mode {
-  --bg: #1f374f;
+  --bg: #111e2b;
   --text: white;
   --nav-bg: #111e2b;
   --nav-text: white;
@@ -277,6 +277,8 @@ body.dark-mode .events-column h2 {
   padding: 1rem 1.2rem;
   box-shadow: 0 1px 6px rgba(0,0,0,0.05);
   transition: background 0.3s, color 0.3s;
+  
+  border: 2px solid var(--green);
 }
 .event-title {
   font-weight: bold;
@@ -306,15 +308,18 @@ body.dark-mode .events-column h2 {
 @media (max-width: 600px) {
   .events-heading-card {
     display: block;
-    width: fit-content;
+    width: fill;
     margin: 0 auto 1.2rem auto;
     background: var(--nav-bg);
     color: var(--nav-text);
     border-radius: 8px;
     box-shadow: 0 1px 6px rgba(0,0,0,0.09);
     padding: 0.5rem 1rem;
+    
+    border: 2px solid var(--green);
   }
   .events-column h2 {
+    text-align: center;
     color: var(--green) !important;
     margin-bottom: 0;
   }
@@ -332,6 +337,43 @@ body.dark-mode .events-column h2 {
     height: auto;
     display: block;
   }
+}
+
+#more-events-btn {
+  display: block;
+  margin: 2rem auto 0 auto;
+  padding: 0.8rem 2.2rem;
+  background: var(--green);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  text-align: center;
+  text-decoration: none;
+}
+body.light-mode #more-events-btn {
+  background: white;
+  color: var(--green);
+  border: 2px solid var(--green);
+}
+body.light-mode #more-events-btn:hover, body.light-mode #more-events-btn:focus {
+  background: #f3f3f3;
+  color: #388a13;
+  border-color: #388a13;
+}
+body.dark-mode #more-events-btn {
+  background: var(--nav-bg);
+  color: var(--green);
+  border: 2px solid var(--green);
+}
+body.dark-mode #more-events-btn:hover, body.dark-mode #more-events-btn:focus {
+  background: #18273a;
+  color: #a6ff7a;
+  border-color: #a6ff7a;
 }
 
 /* preload for light/dark mode */
