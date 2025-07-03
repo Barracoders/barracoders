@@ -388,7 +388,7 @@ body:after {
   background: url('/images/logos/watermarklighter.png') no-repeat -9999px -9999px, url('/images/logos/watermarkdarker.png') no-repeat -9999px -9999px;
 }
 
-/* Doodle decorations for desktop */
+/* doodle rules */
 @media (min-width: 1100px) {
   .about-doodle {
     position: absolute;
@@ -403,7 +403,7 @@ body:after {
   .about-doodle.doodle-3 { bottom: 120px; left: 5vw; transform: rotate(18deg); }
   .about-doodle.doodle-4 { top: 60px; right: 8vw; transform: rotate(-22deg); }
   .about-doodle.doodle-5 { bottom: 60px; right: 6vw; transform: rotate(14deg); }
-  .about-doodle.doodle-6 { top: 220px; left: 8vw; transform: rotate(-6deg); }
+  .about-doodle.doodle-6 { top: 250px; left: 8vw; transform: rotate(-6deg); }
   .about-section-wrapper {
     position: relative;
     width: 100%;
