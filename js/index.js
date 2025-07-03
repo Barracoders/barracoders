@@ -85,3 +85,50 @@ fetch('/calendar/events.json')
     upcoming.sort((a, b) => new Date(a.date) - new Date(b.date));
     renderEvents(upcoming);
   });
+
+// i borrowed the code below me lol
+function applyMode(mode) {
+  const body = document.body;
+  const logoSmall = document.getElementById('logo-small');
+  const modeIcon = document.getElementById('mode-icon');
+  if (mode === 'dark-mode') {
+    body.classList.remove('light-mode');
+    body.classList.add('dark-mode');
+    if (logoSmall) logoSmall.src = '/images/logos/coders_white_cropped.png';
+    if (modeIcon) {
+      modeIcon.classList.remove('fa-moon');
+      modeIcon.classList.add('fa-sun');
+    }
+  } else {
+    body.classList.remove('dark-mode');
+    body.classList.add('light-mode');
+    if (logoSmall) logoSmall.src = '/images/logos/logo-green-ver.png';
+    if (modeIcon) {
+      modeIcon.classList.remove('fa-sun');
+      modeIcon.classList.add('fa-moon');
+    }
+  }
+}
+
+function getSavedMode() {
+  return localStorage.getItem('theme') || 'light-mode';
+}
+
+function saveMode(mode) {
+  localStorage.setItem('theme', mode);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const savedMode = getSavedMode();
+  applyMode(savedMode);
+
+  const toggleButton = document.getElementById('mode-toggle');
+  if (toggleButton) {
+    toggleButton.addEventListener('click', () => {
+      const currentMode = document.body.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode';
+      const newMode = currentMode === 'dark-mode' ? 'light-mode' : 'dark-mode';
+      applyMode(newMode);
+      saveMode(newMode);
+    });
+  }
+});
