@@ -124,7 +124,7 @@
       "tags": ["counterspell", "event", "hackathon"],
       "people": ["Lance", "Jaxson", "Kingston"],
       "orientation": "landscape",
-      "featured": false
+      "featured": true
     },
     {
       "file": "photos/2024-2025/counterspell/c9.webp",
@@ -133,7 +133,7 @@
       "tags": ["counterspell", "event", "hackathon"],
       "people": ["Josh", "Julien"],
       "orientation": "landscape",
-      "featured": false
+      "featured": true
     },
     {
       "file": "photos/2024-2025/counterspell/c10.webp",
@@ -142,7 +142,7 @@
       "tags": ["counterspell", "event", "hackathon"],
       "people": ["Julien"],
       "orientation": "landscape",
-      "featured": false
+      "featured": true
     },
     {
       "file": "photos/2024-2025/interest-meeting/d1.webp",
@@ -151,7 +151,7 @@
       "tags": ["interest-meeting", "special-meeting"],
       "people": ["Julien"],
       "orientation": "landscape",
-      "featured": false
+      "featured": true
     },
     {
       "file": "photos/2024-2025/interest-meeting/d2.webp",
@@ -160,7 +160,7 @@
       "tags": ["interest-meeting", "special-meeting"],
       "people": ["Josh", "Julien"],
       "orientation": "landscape",
-      "featured": false
+      "featured": true
     },
     {
       "file": "photos/2024-2025/interest-meeting/d3.webp",
@@ -169,7 +169,7 @@
       "tags": ["interest-meeting", "special-meeting"],
       "people": ["Group"],
       "orientation": "landscape",
-      "featured": false
+      "featured": true
     },
     {
       "file": "photos/2024-2025/meetings/e1.webp",

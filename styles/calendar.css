@@ -74,7 +74,7 @@ body.dark-mode {
 }
 .calendar-section {
   background: var(--nav-bg);
-  background-image: url('/images/logos/watermarklighter.png');
+  background-image: url('/images/branding/watermarklighter.png');
   background-repeat: no-repeat;
   background-size: 4000px auto;
   background-position: center center;
@@ -90,7 +90,7 @@ body.dark-mode {
 }
 body.light-mode .calendar-section {
   background: var(--nav-bg);
-  background-image: url('/images/logos/watermarklighter.png');
+  background-image: url('/images/branding/watermarklighter.png');
   background-repeat: no-repeat;
   background-size: 4000px auto;
   background-position: center center;
@@ -98,7 +98,7 @@ body.light-mode .calendar-section {
 }
 body.dark-mode .calendar-section {
   background: var(--nav-bg);
-  background-image: url('/images/logos/watermarkdarker.png');
+  background-image: url('/images/branding/watermarkdarker.png');
   background-repeat: no-repeat;
   background-size: 4000px auto;
   background-position: center center;

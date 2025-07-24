@@ -149,7 +149,7 @@ body.dark-mode {
 
 .calendar-section {
   background: var(--nav-bg);
-  background-image: url('/images/logos/watermarklighter.png'); 
+  background-image: url('/images/branding/watermarklighter.png'); 
   background-repeat: repeat;
   background-size: 4000px auto;
   background-position: center center;
@@ -164,13 +164,13 @@ body.dark-mode {
 }
 body.light-mode .calendar-section {
   background: var(--nav-bg);
-  background-image: url('/images/logos/watermarklighter.png');
+  background-image: url('/images/branding/watermarklighter.png');
   background-position: center center;
   background-size: 4000px auto;
 }
 body.dark-mode .calendar-section {
   background: var(--nav-bg);
-  background-image: url('/images/logos/watermarkdarker.png');
+  background-image: url('/images/branding/watermarkdarker.png');
   background-position: center center;
   background-size: 4000px auto;
 }
@@ -385,7 +385,7 @@ body:after {
   overflow: hidden;
   z-index: -1;
   pointer-events: none;
-  background: url('/images/logos/watermarklighter.png') no-repeat -9999px -9999px, url('/images/logos/watermarkdarker.png') no-repeat -9999px -9999px;
+  background: url('/images/branding/watermarklighter.png') no-repeat -9999px -9999px, url('/images/branding/watermarkdarker.png') no-repeat -9999px -9999px;
 }
 
 /* doodle rules */
