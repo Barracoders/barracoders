@@ -1,0 +1,12 @@
+{
+    "file": " -- File Location Goes Here --",
+    "date": "0000-00-00",
+    "description": " -- Short One Sentence Description --",
+    "tags": [" -- ", " -- ", " -- "],
+    "people": [" -- "],
+    "orientation": " -- landscape or portrait -- ",
+    "featured": false
+}
+
+Available Tags (so far): club-fair, group-project, hackathon, event, meeting, workshop, coding, special-meeting, guest-speaker, competition, demo, project-showcase
+Special Tags: counterspell, daydream
