@@ -394,20 +394,50 @@ body:after {
     position: absolute;
     z-index: 1;
     pointer-events: none;
-    opacity: 0.7;
+    opacity: 0.7; 
     width: 80px;
     height: auto;
   }
-  .about-doodle.doodle-1 { top: 120px; left: 2vw; transform: rotate(-12deg); }
-  .about-doodle.doodle-2 { top: 380px; right: 3vw; transform: rotate(8deg); }
-  .about-doodle.doodle-3 { bottom: 120px; left: 5vw; transform: rotate(18deg); }
-  .about-doodle.doodle-4 { top: 60px; right: 8vw; transform: rotate(-22deg); }
-  .about-doodle.doodle-5 { bottom: 60px; right: 6vw; transform: rotate(14deg); }
-  .about-doodle.doodle-6 { top: 250px; left: 8vw; transform: rotate(-6deg); }
+  
+  /* Left Top to Bottom (full opacity) */
+  .about-doodle.doodle-1 { top: 15px; left: 5vw; opacity: 1;  transform: rotate(-12deg); } /* Top Left Circutboard */
+  .about-doodle.doodle-21 { top: 150px; left: 3vw; opacity: 1; transform: rotate(12deg); } /* Top Left Ninja */
+  .about-doodle.doodle-19 { top: 300px; left: 2vw; opacity: 1; transform: rotate(-8deg); } /* Center Left Python */
+  .about-doodle.doodle-6 { top: 450px; left: 0vw; opacity: 1; transform: rotate(-6deg); } /* Center Left Raspberry Pi */
+  .about-doodle.doodle-3 { bottom: 125px; left: 2vw; opacity: 1;  transform: rotate(18deg); } /* Bottom Left Barracuda */
+  .about-doodle.doodle-22 { bottom: 0px; left: 5vw; opacity: 1; transform: rotate(16deg); } /* Bottom Left Github */
+
+  /* Right Top to Bottom (full opacity) */
+  .about-doodle.doodle-23 { top: 0px; right: 5vw; opacity: 1; transform: rotate(-12deg); } /* Top Right Pi */
+  .about-doodle.doodle-2 { top: 150px; right: 3vw; opacity: 1;  transform: rotate(8deg); } /* Top Right Barracuda */
+  .about-doodle.doodle-20 { top: 325px; right: 2vw; opacity: 1; transform: rotate(8deg); } /* Center Right Python */
+  .about-doodle.doodle-4 { top: 450px; right: 0vw; opacity: 1;  transform: rotate(-22deg); } /* Center Right Github */
+  .about-doodle.doodle-5 { bottom: 150px; right: 2vw; opacity: 1;  transform: rotate(14deg); } /* Bottom Right Circut Board */
+  .about-doodle.doodle-24 { bottom: 0px; right: 5vw; opacity: 1; transform: rotate(-16deg); } /* Bottom Right Ninja */
+
+  /* Left Top to Bottom (decreasing opacity) */
+  .about-doodle.doodle-18 { top: 50px; left: 13vw; opacity: 0.5; transform: rotate(-19deg); } /* Top Left Python */
+  .about-doodle.doodle-13 { top: 150px; left: 11vw; opacity: 0.5; transform: rotate(10deg); } /* Top left Barracuda */
+  .about-doodle.doodle-7 { top: 250px; left: 10vw; opacity: 0.5; transform: rotate(24deg); } /*  Center Left Circut Board */
+  .about-doodle.doodle-12 { top: 375px; left: 9vw; opacity: 0.5; transform: rotate(-16deg); } /* Center Left Github*/
+  .about-doodle.doodle-9 { bottom: 200px; left: 9vw; opacity: 0.5; transform: rotate(-32deg); } /* Bottom Left Ninja */
+  .about-doodle.doodle-15 { bottom: 50px; left:12vw; opacity: 0.5; transform: rotate(22deg); } /* Bottom Left Rasp Pi Logo*/
+
+  /* Right Top to Bottom (decreasing opacity) */ 
+  .about-doodle.doodle-8 { top: 50px; right: 13vw; opacity: 0.5; transform: rotate(-18deg); } /* Top Right Github */
+  .about-doodle.doodle-16 { top: 150px; right: 11vw; opacity: 0.5; transform: rotate(-30deg); } /* Top Right Python */
+  .about-doodle.doodle-10 { top: 250px; right: 10vw; opacity: 0.5; transform: rotate(-28deg); } /* Center Right Ninja*/
+  .about-doodle.doodle-14 { top: 375px; right: 9vw; opacity: 0.5; transform: rotate(-15deg); } /* Center Right Circut Board */
+  .about-doodle.doodle-11 { bottom: 200px; right: 9vw; opacity: 0.5; transform: rotate(12deg); } /* Bottom Right Pi */
+  .about-doodle.doodle-17 { bottom: 50px; right: 12vw; opacity: 0.5; transform: rotate(7deg); } /* Bottom Right Barracuda */
+
+  
+
+  
   .about-section-wrapper {
     position: relative;
     width: 100%;
-    min-height: 600px;
+    min-height: 700px;
   }
 }
 @media (max-width: 1099px) {

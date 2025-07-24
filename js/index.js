@@ -64,7 +64,7 @@ function renderEvents(events) {
     eventsList.innerHTML = '<p>No upcoming events.</p>';
     return;
   }
-  events.slice(0, 5).forEach(event => {
+  events.slice(0, 4).forEach(event => {
     const eventDiv = document.createElement('div');
     eventDiv.className = 'event-card';
     eventDiv.innerHTML = `
