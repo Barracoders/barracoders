@@ -1,4 +1,3 @@
-
 .photos-section {
 position: relative;
 width: 100%;
@@ -42,29 +41,89 @@ body.light-mode .photos-section {
   position: relative;
   z-index: 2;
   width: 100vw;
-  max-width: 700px;
+  max-width: 900px;
   height: 350px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  min-height: 350px;
+  display: block;
   overflow: visible;
 }
 
 .photo-card {
-  position: relative;
-  width: 320px;
-  height: 320px;
-  max-width: 90vw;
-  max-height: 90vw;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
-  border-radius: 16px;
-  background: #fff;
-  padding: 0;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-end;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+        width: 320px;
+        height: 320px;
+        max-width: 90vw;
+        max-height: 90vw;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+        border-radius: 16px;
+        background: #fff;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-end;
+  transition: transform 0.7s cubic-bezier(.77,0,.18,1), filter 0.7s, opacity 0.7s;
+}
+
+
+.photo-size-main {
+  z-index: 3;
+  width: 400px;
+  height: 400px;
+  filter: blur(0);
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+.photo-size-sm {
+  z-index: 2;
+  width: 300px;
+  height: 300px;
+  opacity: 0.85;
+  transform: translate(-50%, -50%) scale(0.75);
+}
+.photo-size-xs {
+  z-index: 1;
+  width: 200px;
+  height: 200px;
+  opacity: 0.6;
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+
+.photo-blur-none {
+  filter: blur(0);
+}
+.photo-blur-sm {
+  filter: blur(3.5px);
+}
+.photo-blur-xs {
+  filter: blur(1.5px);
+}
+
+
+.photo-pos-0 {
+  left: 10%;
+  top: 50%;
+}
+ .photo-pos-1 {
+   left: 22%;
+   top: 50%;
+ }
+.photo-pos-2 {
+  left: 50%;
+  top: 50%;
+}
+ .photo-pos-3 {
+   left: 78%;
+   top: 50%;
+ }
+.photo-pos-4 {
+  left: 90%;
+  top: 50%;
 }
 
 .photo-card img {
@@ -95,34 +154,76 @@ body.light-mode .photos-section {
   min-width: 0;
   max-width: 100%;
   padding: 0 0 0.3em 0;
+        height: 5.6em;
+        min-height: 5.6em;
+        max-height: 5.6em;
 }
 
-.photo-info-inner {
-  background: rgba(24, 24, 32, 0.72);
-  border-radius: 0 0 16px 16px;
-  box-shadow: 0 4px 16px 0 rgba(0,0,0,0.22), 0 1.5px 6px 0 rgba(0,0,0,0.18);
-  backdrop-filter: blur(2.5px);
-  padding: 0.18em 1.1em 0.18em 1.1em;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 0.08em;
-  min-width: 0;
-  max-width: 95%;
+ .photo-info-inner {
+   background: rgba(24, 24, 32, 0.72);
+   border-radius: 0 0 16px 16px;
+   box-shadow: 0 4px 16px 0 rgba(0,0,0,0.22), 0 1.5px 6px 0 rgba(0,0,0,0.18);
+   backdrop-filter: blur(2.5px);
+   padding: 0.18em 1em 0.18em 1.2em;
+   display: block;
+   min-width: 0;
+   width: 95%;
+   position: absolute;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   height: 5.6em;
+   min-height: 5.6em;
+   max-height: 5.6em;
+   box-sizing: border-box;
+   padding: 0.18em 1.2em 0.7em 1.2em;
 }
 
-.photo-info-description {
-  font-size: 1.08em;
-  font-weight: 500;
-  line-height: 1.2;
-  width: 100%;
-  text-align: center;
-  white-space: normal;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.45), 0 0.5px 0.5px #fff;
-}
+ .photo-info-description {
+   font-size: 1.08em;
+   font-weight: 500;
+   line-height: 1.2;
+   width: 100%;
+   text-align: center;
+   white-space: normal;
+   text-shadow: 0 2px 8px rgba(0,0,0,0.45), 0 0.5px 0.5px #fff;
+   position: absolute;
+   left: 0;
+   right: 0;
+   top: 0;
+   width: 100%;
+   min-height: 2.2em;
+   height: 2.2em;
+   max-height: 2.2em;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 2;
+   line-clamp: 2;
+   -webkit-box-orient: vertical;
+ }
+ .photo-info-description.crossfade {
+   position: absolute;
+   left: 0;
+   right: 0;
+   top: 0;
+   width: 100%;
+   font: inherit;
+   text-align: inherit;
+   line-height: inherit;
+   min-height: 2.2em;
+   height: 2.2em;
+   max-height: 2.2em;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 2;
+   line-clamp: 2;
+   -webkit-box-orient: vertical;
+ }
 .photo-info-date {
   display: block;
-  margin: 0.15em auto 0  auto;
+  margin: 0;
   font-size: 0.98em;
   font-weight: 400;
   color: #eaeaea;
@@ -133,7 +234,44 @@ body.light-mode .photos-section {
   border: none;
   box-shadow: none;
   width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 1.3em;
+  height: 1.3em;
+  max-height: 1.3em;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+.photo-info-date.crossfade {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  font: inherit;
+  text-align: center;
+  line-height: inherit;
+  min-height: 1.2em;
+  height: 1.2em;
+  max-height: 1.2em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.photo-size-xs .photo-info-description {
+  font-size: 0.82em;
+  height: 1.1em;
+  max-height: 1.1em;
+}
+.photo-size-xs .photo-info-date {
+  font-size: 0.82em;
+  height: 0.7em;
+  max-height: 0.7em;
+}
+
 
 body.light-mode .photo-info {
   --photo-info-bg: #65ba29;
@@ -143,41 +281,26 @@ body.dark-mode .photo-info {
   --photo-info-bg: #222e3a;
   --photo-info-color: #fff;
 }
-@media (max-width: 600px) {
-  .photo-card {
-    width: 90vw;
-    height: 90vw;
-    border-radius: 12px;
+@media (max-width: 900px) {
+  .featured-photos-rotator {
+    max-width: 98vw;
+    height: 220px;
+    min-height: 180px;
+  }
+  .photo-size-main {
+    width: 225px;
+    height: 225px;
+  }
+  .photo-size-sm {
+    width: 150px;
+    height: 150px;
+  }
+  .photo-size-xs {
+    width: 88px;
+    height: 88px;
   }
   .photo-card img {
     border-radius: 12px;
-  }
-  .photo-info {
-    border-radius: 0 0 12px 12px;
-    font-size: 0.98rem;
-    padding: 0.4em 0.5em 0.5em 0.5em;
-    min-height: 2.8em;
-    background: var(--photo-bg);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 0.1em;
-  }
-  .photo-info-description {
-    font-size: 1em;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.45), 0 0.5px 0.5px #fff;
-  }
-  .photo-info-date {
-    font-size: 0.95em;
-    margin: 0.3em auto 0.1em auto;
-    color: #222;
-    opacity: 0.85;
-    text-shadow: none;
-    background: none;
-    border: none;
-    box-shadow: none;
-    width: 100%;
   }
 }
 

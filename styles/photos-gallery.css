@@ -1,0 +1,324 @@
+.watermark-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.2em;
+  margin-bottom: 2.5em;
+  justify-items: center;
+}
+.month-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.85;
+  filter: blur(7px) saturate(1.2);
+  width: 500px;
+  height: 260px;
+  background: url('/images/logos/logo-green-ver.png') center center/contain no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body.dark-mode .month-watermark {
+  background-image: url('/images/logos/coders_white_cropped.png');
+}
+@media (max-width: 700px) {
+  .month-watermark {
+    width: 120px;
+    height: 120px;
+  }
+}
+.watermark-grid .photo-card-gallery {
+  z-index: 1;
+}
+:root {
+  --gallery-bg: #fff;
+  --year-hr: #65ba29;
+  --month: #1a3a6b;
+  --photo-border: #65ba29;
+  --green: #65ba29;
+  --dark: #1f374f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body.light-mode {
+  --bg: #65ba29;
+  --text: #222;
+  --nav-bg: white;
+  --nav-text: var(--green);
+  --logo-src: url('/images/logos/logo-green-ver.png');
+  --back-events-color: var(--green);
+  --hero-color: var(--green);
+  --events-shadow: 0 4px 24px 0 rgba(33, 58, 43, 0.38);
+}
+body.dark-mode {
+  --gallery-bg: #1f374f;
+  --year-hr: #4e9cff;
+  --month: #4e9cff;
+  --photo-border: #4e9cff;
+  --bg: #111e2b;
+  --text: white;
+  --nav-bg: #111e2b;
+  --nav-text: white;
+  --back-events-color: var(--dark);
+  --logo-src: url('/images/logos/coders_white_cropped.png');
+  --hero-color: #1f374f;
+  --events-shadow: 0 4px 24px 0 rgba(10, 18, 32, 0.85); 
+}
+body.light-mode,
+body.dark-mode {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+body {
+  background: var(--photo-border);
+}
+#navbar {
+  background-color: var(--nav-bg);
+  color: var(--nav-text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  width: 100%; 
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  z-index: 1000;
+  border-radius: 0; 
+  transition: all 0.3s ease;
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-left a {
+  color: var(--nav-text);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+#logo-small {
+  height: 32px;
+  margin-right: 1rem;
+  transition: 0.3s ease;
+}
+.nav-right button {
+  background: none;
+  border: none;
+  color: var(--nav-text);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.photos-gallery-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5em 1em 6em 1em; 
+  background: var(--gallery-bg);
+  ;
+  box-shadow: 0 2px 24px 0 rgba(33, 58, 43, 0.13);
+  position: relative;
+  z-index: -1;
+  
+footer {
+  position: relative;
+  z-index: 10;
+}
+.gallery-bg-logo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.13;
+  filter: blur(7px) saturate(1.2);
+  width: 420px;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 700px) {
+  .gallery-bg-logo {
+    width: 220px;
+    height: 220px;
+  }
+}
+.photos-year-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2.5em 0 1.2em 0;
+  width: 100%;
+  position: relative;
+  gap: 1.2em;
+}
+.photos-year {
+  font-size: 2.3em;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 0.01em;
+  padding: 0.15em 1.1em 0.15em 1.1em;
+  background: var(--gallery-bg);
+  z-index: 2;
+  border-radius: 2em;
+  box-shadow: 0 2px 12px 0 rgba(33,58,43,0.07);
+  position: relative;
+  line-height: 1.1;
+  display: inline-block;
+  color: var(--year-hr);
+  border: 2px solid var(--year-hr);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.photos-year-hr {
+  flex: 1 1 0;
+  border: none;
+  border-top: 4px solid var(--year-hr);
+  margin: 0 0.5em;
+  height: 0;
+  min-width: 32px;
+  opacity: 0.7;
+  align-self: center;
+  position: relative;
+  top: 0.3em;
+}
+.photos-month-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em 0 1em 0;
+}
+.photos-month {
+  font-size: 1.35em;
+  font-weight: 600;
+  color: var(--month);
+  letter-spacing: 0.01em;
+  background: var(--gallery-bg);
+  padding: 0 0.5em;
+  border-radius: 0.7em;
+}
+}
+
+.photos-year {
+  font-size: 2.3em;
+  font-weight: 700;
+  margin: 2.5em 0 1.2em 0;
+  text-align: left;
+  letter-spacing: 0.01em;
+  color: var(--gallery-year, #65ba29);
+}
+
+body.dark-mode .photos-year {
+  color: #65ba29;
+}
+body.light-mode .photos-year {
+  color: #1a4d1a;
+}
+
+.photos-month {
+  font-size: 1.35em;
+  font-weight: 600;
+  margin: 2em 0 1em 0;
+  color: var(--gallery-month, #4e9cff);
+  letter-spacing: 0.01em;
+}
+body.dark-mode .photos-month {
+  color: #4e9cff;
+}
+body.light-mode .photos-month {
+  color: #1a3a6b;
+}
+
+.photos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.2em;
+  margin-bottom: 2.5em;
+  justify-items: center;
+}
+
+.photo-card-gallery {
+  background: var(--gallery-bg);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+  border: 2.5px solid var(--photo-border);
+  width: 210px;
+  margin-bottom: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  transition: box-shadow 0.18s, border-color 0.18s;
+}
+.photo-img-wrap {
+  width: 100%;
+  height: 160px;
+  background: #e6f2e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.photo-card-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px 10px 0 0;
+}
+.photo-meta {
+  background: none;
+  padding: 0.7em 0.7em 0.5em 0.7em;
+  border-top: 1.5px solid var(--photo-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2em;
+}
+.photo-desc {
+  font-size: 1em;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 0.2em;
+}
+.photo-date {
+  font-size: 0.95em;
+  color: #888;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .photos-gallery-section {
+    padding: 1.2em 0.2em 2em 0.2em;
+  }
+  .photos-year {
+    font-size: 1.5em;
+    margin: 1.5em 0 0.7em 0;
+  }
+  .photos-month {
+    font-size: 1.1em;
+    margin: 1.2em 0 0.7em 0;
+  }
+  .photos-grid {
+    gap: 0.7em;
+  }
+  .photo-thumb img {
+    height: 100px;
+    border-radius: 8px;
+  }
+  .photo-thumb .caption {
+    font-size: 0.92em;
+    border-radius: 0 0 8px 8px;
+    padding: 0.3em 0.4em;
+  }
+}

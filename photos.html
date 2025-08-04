@@ -9,6 +9,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   />
   <link rel="stylesheet" href="/styles/index.css" />
+  <link rel="stylesheet" href="/styles/photos-gallery.css" />
   <link
       rel="icon"
       href="images/logos/icon-logo.png"
@@ -16,28 +17,38 @@
     />
 </head>
 <body>
+
   <header>
-    <nav id="navbar">
+    <nav id="navbar" class="navbar">
       <div class="nav-left">
-        <a href="/index.html"><img src="/images/logos/coders_white_cropped.png" alt="Logo" id="logo-small" /></a>
-        <a href="/index.html">Home</a>
-        <a href="/calendar.html">Calendar</a>
-        <a href="/photos.html">Photos</a>
+        <a href="/index.html" class="nav-logo-link"><img src="/images/logos/coders_white_cropped.png" alt="Logo" id="logo-small" /></a>
+        <a href="/index.html" class="nav-link">Home</a>
+        <a href="/calendar.html" class="nav-link">Calendar</a>
+        <a href="/photos.html" class="nav-link active">Photos</a>
       </div>
       <div class="nav-right">
-        <button id="mode-toggle"><i class="fas fa-moon"></i></button>
+        <button id="mode-toggle" aria-label="Toggle light/dark mode"><i class="fas fa-moon"></i></button>
       </div>
     </nav>
   </header>
 
  
 
-  <section class="white-section"></section>
-  <section class="dark-section"></section>
+
+
+  <main>
+    <div class="site-content">
+      <section class="photos-gallery-section" id="photos-gallery">
+        <!-- Photos will be loaded here by JS -->
+      </section>
+    </div>
+  </main>
 
   <footer>
     <p>&copy; 2025 <a href="https://www-bhs.stjohns.k12.fl.us/">Beachside Highschool</a>. Created and Maintained by the Beachside Barracoders </p>
   </footer>
+
+  <script src="/js/photos-gallery.js"></script>
 
   
 </body>

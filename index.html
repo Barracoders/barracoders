@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="/styles/photos-section.css" />
   <link
       rel="icon"
-      href="images/logos/icon-logo-white-ver.png"
+      href="images/logos/icon-logo.png"
       type="image/icon type"
     />
 </head>
@@ -164,6 +164,9 @@
       
       <noscript><p style="color:white;background:#c00;padding:1em;border-radius:8px;">Photo slideshow requires JavaScript enabled and correct file paths. If you see no photos, check your server and browser console.</p></noscript>
     </div>
+    <div class="photos-carousel-actions" style="width:100%;display:flex;justify-content:center;margin-top:1.5em;">
+      <a href="photos.html" class="more-photos-btn">More Photos</a>
+    </div>
   </section>
 
   <footer>
@@ -174,4 +177,25 @@
   <script src="/js/photos-rotator-square.js" defer></script>
 
 </body>
+<style>
+.more-photos-btn {
+  display: inline-block;
+  background: var(--green, #65ba29);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.8em 2em;
+  border-radius: 14px;
+  font-size: 1.15rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+  margin-top: 0.5em;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+}
+.more-photos-btn:hover {
+  background: #fff;
+  color: var(--green, #65ba29);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  border: 1.5px solid var(--green, #65ba29);
+}
+</style>
 </html>
