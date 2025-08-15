@@ -1,9 +1,17 @@
 [
   {
+    "title": "Club Fair",
+    "date": "2025-9-10",
+    "time": "11:44 AM",
+    "location": "School Courtyard",
+    "description": "The Barracoders will be at the club fair to answer any questions you may have about the club and to sign up new members.",
+    "link": "<link>"
+  },
+  {
     "title": "Interest Meeting",
     "date": "2025-9-18",
     "time": "8:45 AM",
-    "location": "Mr. Carney's Room",
+    "location": "Mrs. Graham's Rooms 40-07",
     "description": "placeholder description for interest meeting - this can be updated later",
     "link": "<link>"
   },
@@ -11,15 +19,31 @@
     "title": "First Meeting",
     "date": "2025-9-25",
     "time": "4:05 PM",
-    "location": "Mr. Carney's Room",
+    "location": "Mrs. Graham's Rooms 40-07",
     "description": "placeholder description for first meeting - this can be updated later",
     "link": "<link>"
+  },
+  {
+    "title": "Daydream Hackathon Day 1",
+    "date": "2025-9-27",
+    "time": "11:30 AM",
+    "location": "Code Ninjas World Golf",
+    "description": "Day 1 of Hack Club's 24-hour Daydream Hackathon! Hosted at Code Ninjas World Golf, this event is a great opportunity to meet other coders and work on your projects.",
+    "link": "https://daydream.hackclub.com/st-aug"
+  },
+  {
+    "title": "Daydream Hackathon Day 2",
+    "date": "2025-9-28",
+    "time": "12:00 AM",
+    "location": "Code Ninjas World Golf",
+    "description": "Day 2 of Hack Club's 24-hour Daydream Hackathon! Hosted at Code Ninjas World Golf, this event is a great opportunity to meet other coders and work on your projects.",
+    "link": "https://daydream.hackclub.com/st-aug"
   },
   {
     "title": "Meeting",
     "date": "2025-10-2",
     "time": "4:05 PM",
-    "location": "Mr. Carney's Room",
+    "location": "Mrs. Graham's Rooms 40-07",
     "description": "placeholder description for meeting - this can be updated later",
     "link": "<link>"
   },
@@ -27,7 +51,7 @@
     "title": "Meeting",
     "date": "2025-10-9",
     "time": "4:05 PM",
-    "location": "Mr. Carney's Room",
+    "location": "Mrs. Graham's Rooms 40-07",
     "description": "placeholder description for meeting - this can be updated later",
     "link": "<link>"
   },
@@ -35,7 +59,7 @@
     "title": "Meeting",
     "date": "2025-10-16",
     "time": "4:05 PM",
-    "location": "Mr. Carney's Room",
+    "location": "Mrs. Graham's Rooms 40-07",
     "description": "placeholder description for meeting - this can be updated later",
     "link": "<link>"
   },
@@ -43,7 +67,7 @@
     "title": "Meeting",
     "date": "2025-10-23",
     "time": "4:05 PM",
-    "location": "Mr. Carney's Room",
+    "location": "Mrs. Graham's Rooms 40-07",
     "description": "placeholder description for meeting - this can be updated later",
     "link": "<link>"
   },
@@ -51,7 +75,7 @@
     "title": "Meeting",
     "date": "2025-10-30",
     "time": "4:05 PM",
-    "location": "Mr. Carney's Room",
+    "location": "Mrs. Graham's Rooms 40-07",
     "description": "placeholder description for meeting - this can be updated later",
     "link": "<link>"
   },
@@ -59,7 +83,7 @@
     "title": "Meeting",
     "date": "2025-11-6",
     "time": "4:05 PM",
-    "location": "Mr. Carney's Room",
+    "location": "Mrs. Graham's Rooms 40-07",
     "description": "placeholder description for meeting - this can be updated later",
     "link": "<link>"
   },
@@ -67,7 +91,7 @@
     "title": "Meeting",
     "date": "2025-11-13",
     "time": "4:05 PM",
-    "location": "Mr. Carney's Room",
+    "location": "Mrs. Graham's Rooms 40-07",
     "description": "placeholder description for meeting - this can be updated later",
     "link": "<link>"
   },
@@ -75,7 +99,7 @@
     "title": "Meeting",
     "date": "2025-11-20",
     "time": "4:05 PM",
-    "location": "Mr. Carney's Room",
+    "location": "Mrs. Graham's Rooms 40-07",
     "description": "placeholder description for meeting - this can be updated later",
     "link": "<link>"
   },
@@ -83,7 +107,7 @@
     "title": "Meeting",
     "date": "2025-12-4",
     "time": "4:05 PM",
-    "location": "Mr. Carney's Room",
+    "location": "Mrs. Graham's Rooms 40-07",
     "description": "placeholder description for meeting - this can be updated later",
     "link": "<link>"
   },
@@ -91,7 +115,7 @@
     "title": "Meeting",
     "date": "2025-12-11",
     "time": "4:05 PM",
-    "location": "Mr. Carney's Room",
+    "location": "Mrs. Graham's Rooms 40-07",
     "description": "placeholder description for meeting - this can be updated later",
     "link": "<link>"
   },
@@ -99,7 +123,7 @@
     "title": "Meeting/Holiday Party",
     "date": "2025-12-18",
     "time": "4:05 PM",
-    "location": "Mr. Carney's Room",
+    "location": "Mrs. Graham's Rooms 40-07",
     "description": "placeholder description for meeting - this can be updated later",
     "link": "<link>"
   },
@@ -107,7 +131,7 @@
     "title": "Meeting",
     "date": "2026-1-8",
     "time": "4:05 PM",
-    "location": "Mr. Carney's Room",
+    "location": "Mrs. Graham's Rooms 40-07",
     "description": "placeholder description for meeting - this can be updated later",
     "link": "<link>"
   },
@@ -115,7 +139,7 @@
     "title": "Meeting",
     "date": "2026-1-15",
     "time": "4:05 PM",
-    "location": "Mr. Carney's Room",
+    "location": "Mrs. Graham's Rooms 40-07",
     "description": "placeholder description for meeting - this can be updated later",
     "link": "<link>"
   },
@@ -123,7 +147,7 @@
     "title": "Meeting",
     "date": "2026-1-22",
     "time": "4:05 PM",
-    "location": "Mr. Carney's Room",
+    "location": "Mrs. Graham's Rooms 40-07",
     "description": "placeholder description for meeting - this can be updated later",
     "link": "<link>"
   },
@@ -131,7 +155,7 @@
     "title": "Meeting",
     "date": "2026-1-29",
     "time": "4:05 PM",
-    "location": "Mr. Carney's Room",
+    "location": "Mrs. Graham's Rooms 40-07",
     "description": "placeholder description for meeting - this can be updated later",
     "link": "<link>"
   },
@@ -139,7 +163,7 @@
     "title": "Meeting",
     "date": "2026-2-5",
     "time": "4:05 PM",
-    "location": "Mr. Carney's Room",
+    "location": "Mrs. Graham's Rooms 40-07",
     "description": "placeholder description for meeting - this can be updated later",
     "link": "<link>"
   },
@@ -147,7 +171,7 @@
     "title": "Meeting",
     "date": "2026-2-12",
     "time": "4:05 PM",
-    "location": "Mr. Carney's Room",
+    "location": "Mrs. Graham's Rooms 40-07",
     "description": "placeholder description for meeting - this can be updated later",
     "link": "<link>"
   },
@@ -155,7 +179,7 @@
     "title": "Meeting",
     "date": "2026-2-19",
     "time": "4:05 PM",
-    "location": "Mr. Carney's Room",
+    "location": "Mrs. Graham's Rooms 40-07",
     "description": "placeholder description for meeting - this can be updated later",
     "link": "<link>"
   },
@@ -163,7 +187,7 @@
     "title": "Meeting",
     "date": "2026-2-26",
     "time": "4:05 PM",
-    "location": "Mr. Carney's Room",
+    "location": "Mrs. Graham's Rooms 40-07",
     "description": "placeholder description for meeting - this can be updated later",
     "link": "<link>"
   },
@@ -171,7 +195,7 @@
     "title": "Meeting",
     "date": "2026-3-5",
     "time": "4:05 PM",
-    "location": "Mr. Carney's Room",
+    "location": "Mrs. Graham's Rooms 40-07",
     "description": "placeholder description for meeting - this can be updated later",
     "link": "<link>"
   },
@@ -179,7 +203,7 @@
     "title": "Meeting",
     "date": "2026-3-12",
     "time": "4:05 PM",
-    "location": "Mr. Carney's Room",
+    "location": "Mrs. Graham's Rooms 40-07",
     "description": "placeholder description for meeting - this can be updated later",
     "link": "<link>"
   },
@@ -187,7 +211,7 @@
     "title": "Meeting",
     "date": "2026-3-26",
     "time": "4:05 PM",
-    "location": "Mr. Carney's Room",
+    "location": "Mrs. Graham's Rooms 40-07",
     "description": "placeholder description for meeting - this can be updated later",
     "link": "<link>"
   },
@@ -195,7 +219,7 @@
     "title": "Meeting",
     "date": "2026-4-2",
     "time": "4:05 PM",
-    "location": "Mr. Carney's Room",
+    "location": "Mrs. Graham's Rooms 40-07",
     "description": "placeholder description for meeting - this can be updated later",
     "link": "<link>"
   },
@@ -203,7 +227,7 @@
     "title": "Meeting",
     "date": "2026-4-9",
     "time": "4:05 PM",
-    "location": "Mr. Carney's Room",
+    "location": "Mrs. Graham's Rooms 40-07",
     "description": "placeholder description for meeting - this can be updated later",
     "link": "<link>"
   },
@@ -211,7 +235,7 @@
     "title": "Meeting",
     "date": "2026-4-16",
     "time": "4:05 PM",
-    "location": "Mr. Carney's Room",
+    "location": "Mrs. Graham's Rooms 40-07",
     "description": "placeholder description for meeting - this can be updated later",
     "link": "<link>"
   },
@@ -219,7 +243,7 @@
     "title": "Meeting",
     "date": "2026-4-23",
     "time": "4:05 PM",
-    "location": "Mr. Carney's Room",
+    "location": "Mrs. Graham's Rooms 40-07",
     "description": "placeholder description for meeting - this can be updated later",
     "link": "<link>"
   },
@@ -227,7 +251,7 @@
     "title": "Meeting",
     "date": "2026-4-30",
     "time": "4:05 PM",
-    "location": "Mr. Carney's Room",
+    "location": "Mrs. Graham's Rooms 40-07",
     "description": "placeholder description for meeting - this can be updated later",
     "link": "<link>"
   },
@@ -235,7 +259,7 @@
     "title": "Meeting",
     "date": "2026-5-7",
     "time": "4:05 PM",
-    "location": "Mr. Carney's Room",
+    "location": "Mrs. Graham's Rooms 40-07",
     "description": "placeholder description for meeting - this can be updated later",
     "link": "<link>"
   },
@@ -243,7 +267,7 @@
     "title": "Last Meeting",
     "date": "2026-5-14",
     "time": "4:05 PM",
-    "location": "Mr. Carney's Room",
+    "location": "Mrs. Graham's Rooms 40-07",
     "description": "placeholder description for last meeting - this can be updated later",
     "link": "<link>"
   }

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> 9/25/2025 Meeting</title>
+  <link rel="stylesheet" href="/styles/index.css" />
+  <link
+      rel="icon"
+      href="/images/logos/icon-logo.png"
+      type="image/icon type"
+    />
+  <style>
+    .prereq-section {
+      border: 2px solid #65ba29;
+      border-radius: 10px;
+      background: linear-gradient(90deg,#eaffea 0%,#f6fafd 100%);
+      padding: 1.1em 1.5em 1.1em 1.5em;
+      margin: 1.5em 0 2em 0;
+      box-shadow: 0 2px 10px rgba(33,58,43,0.10);
+      color: #1f374f;
+    }
+    .prereq-section h2 {
+      color: #388a13;
+    }
+    .prereq-section li span {
+      color: #3a7bd5;
+    }
+    body.dark-mode .prereq-section {
+      background: linear-gradient(90deg,#23394d 0%,#1f374f 100%);
+      border-color: #65ba29;
+      color: black;
+    }
+    body.dark-mode .prereq-section h2 {
+      color: #a6ff7a;
+    }
+    body.dark-mode .prereq-section li span {
+      color: #65baee;
+    }
+    .optional-github-container {
+      border: 2px solid #3a7bd5;
+      border-radius: 10px;
+      background: linear-gradient(90deg,#e6f0ff 0%,#f6fafd 100%);
+      padding: 1.2em 1.5em 1.2em 1.5em;
+      margin: 1.5em 0 2em 0;
+      box-shadow: 0 2px 10px rgba(58,123,213,0.10);
+      color: #1f374f;
+    }
+    .optional-github-container span {
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #3a7bd5;
+    }
+    body.dark-mode .optional-github-container {
+      background: linear-gradient(90deg,#23394d 0%,#1f374f 100%);
+      border-color: #65baee;
+      color: #eaffea;
+    }
+    body.dark-mode .optional-github-container span {
+      color: #65baee;
+    }
+    .file-link-card-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin: 1.5em 0 2.2em 0;
+      padding: 0;
+      gap: 1.2em;
+    }
+    .file-link-card {
+      display: flex;
+      align-items: center;
+      background: linear-gradient(90deg, #eaffea 0%, #f6fafd 100%);
+      border: 2.5px solid #65ba29;
+      border-radius: 14px;
+      padding: 1.1em 2em 1.1em 1.5em;
+      box-shadow: 0 4px 18px rgba(33,58,43,0.13);
+      font-size: 1.13em;
+      color: #1f374f;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.18s, border 0.18s, color 0.18s, box-shadow 0.18s;
+      min-width: 220px;
+      max-width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    .file-link-card:hover {
+      background: linear-gradient(90deg, #d6ffd6 0%, #eaffea 100%);
+      border-color: #388a13;
+      color: #388a13;
+      box-shadow: 0 6px 24px rgba(56,138,19,0.13);
+      text-decoration: underline;
+    }
+    .file-link-card .file-icon {
+      font-size: 1.7em;
+      margin-right: 0.9em;
+      color: #65ba29;
+      flex-shrink: 0;
+      filter: drop-shadow(0 1px 2px #b6e6b6);
+    }
+    .file-link-card .file-label {
+      font-size: 1.08em;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+    body.dark-mode .markdown-box .hackatime-guide {
+      background: linear-gradient(90deg, #1f374f 0%, #23394d 100%) !important;
+      color: #eaffea !important;
+      border-color: #65ba29 !important;
+    }
+    body.dark-mode .markdown-box .hackatime-guide h3,
+    body.dark-mode .markdown-box .hackatime-guide h4 {
+      color: #a6ff7a !important;
+    }
+    body.dark-mode .markdown-box .hackatime-guide li,
+    body.dark-mode .markdown-box .hackatime-guide p {
+      color: #eaffea !important;
+    }
+    body.dark-mode .markdown-box a {
+      color: #65ba29;
+      text-decoration: underline;
+      transition: color 0.2s;
+    }
+    body.dark-mode .markdown-box a:hover {
+      color: #a6ff7a;
+    }
+    .markdown-box ul {
+      padding-left: 2.2em;
+      margin-bottom: 1em;
+    }
+    .markdown-box ol {
+      padding-left: 2.2em;
+      margin-bottom: 1em;
+    }
+    .markdown-box li {
+      margin-bottom: 0.4em;
+    }
+    .markdown-box code {
+      background: #23272e;
+      color: #ffe066;
+      font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+      font-size: 0.98em;
+      border-radius: 5px;
+      padding: 0.15em 0.45em;
+      margin: 0 0.1em;
+      word-break: break-word;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+    }
+    .markdown-box pre {
+      background: #23272e;
+      color: #ffe066;
+      font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+      font-size: 1em;
+      border-radius: 7px;
+      padding: 1em 1.2em;
+      margin: 1.2em 0;
+      overflow-x: auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    }
+    .home-btn {
+      position: fixed;
+      top: 18px;
+      left: 24px;
+      z-index: 1001;
+      background: var(--nav-bg, #fff);
+      color: var(--nav-text, #65ba29);
+      border: 2px solid var(--green, #65ba29);
+      border-radius: 8px;
+      padding: 0.5rem 1.2rem;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .home-btn:hover {
+      background: var(--green, #65ba29);
+      color: #fff;
+    }
+    body {
+      transition: background 0.3s, color 0.3s;
+    }
+    .markdown-box {
+      max-width: 800px;
+      margin: 90px auto 2rem auto;
+      background: none;
+      color: var(--text, #222);
+      border-radius: 0;
+      box-shadow: none;
+      padding: 0 1.5rem;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      min-height: 300px;
+    }
+    .markdown-box img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin: 1rem 0;
+      display: block;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .markdown-box video {
+      max-width: 100%;
+      border-radius: 8px;
+      margin: 1rem auto;
+      display: block;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      background: #000;
+      text-align: center;
+    }
+    .mode-toggle-btn {
+      position: fixed;
+      top: 18px;
+      right: 24px;
+      z-index: 1001;
+      background: var(--nav-bg, #fff);
+      color: var(--nav-text, #65ba29);
+      border: 2px solid var(--green, #65ba29);
+      border-radius: 8px;
+      padding: 0.5rem 1.2rem;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .mode-toggle-btn:hover {
+      background: var(--green, #65ba29);
+      color: #fff;
+    }
+    @media (max-width: 600px) {
+      .markdown-box {
+        padding: 1rem 0.5rem;
+        margin: 80px 0.2rem 1rem 0.2rem;
+      }
+      .mode-toggle-btn {
+        top: 10px;
+        right: 10px;
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+      }
+      .home-btn {
+        top: 10px;
+        left: 10px;
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+      }
+      .markdown-box video {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  </style>
+</head>
+<body class="light-mode">
+  <a class="home-btn" href="/index.html">🏠 Home</a>
+  <button class="mode-toggle-btn" onclick="toggleMode()">🌙 Dark Mode</button>
+  <div class="markdown-box" id="markdownBox">
+    
+    <h1>Barracoders Meeting - September 25, 2025</h1>
+    <hr>
+    <div class="prereq-section" style="border:2px solid #65ba29; border-radius:10px; background:linear-gradient(90deg,#eaffea 0%,#f6fafd 100%); padding:1.1em 1.5em 1.1em 1.5em; margin:1.5em 0 2em 0; box-shadow:0 2px 10px rgba(33,58,43,0.10);">
+      <h2 style="margin-top:0;color:#388a13;font-size:1.3em;">Prerequisites</h2>
+      <ul style="margin-bottom:0.5em;">
+        <li><b>Hackatime/Hack Club Dashboard account</b> (required)</li>
+        <li><b>GitHub account</b> <span style="color:#3a7bd5;">(optional, for project tracking)</span></li>
+        <li>
+          <a href="/meetings/2025-26/September/green.png" download style="display:inline-flex;align-items:center;gap:0.5em;text-decoration:none;color:#388a13;font-weight:600;">
+            <span style="font-size:1.2em;">🟩</span> Download <span style="text-decoration:underline;">green.png</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <img src="25-assets/startdemo.gif" alt="Start Demo">
+    <div class="scroll-arrow" onclick="scrollToInfo()" tabindex="0" aria-label="Scroll down" role="button" style="text-align:center;margin:1.5em 0;cursor:pointer;">
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 20L24 32L36 20" stroke="#65ba29" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </div>
+    <section id="info">
+      <h2>1. Download Godot and Create Your Project</h2>
+      <p>Godot is a free, open source game engine that you will be using to make your game. It's very easy to learn as a beginner! </p>
+      <hr>
+      <div class="file-link-card-wrapper">
+      <a href="https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_win64.exe.zip" download class="file-link-card">
+        <span class="file-icon">📄</span>
+        <span class="file-label">Download Godot (ZIP)</span>
+      </a>
+      <span style="color:#888;font-size:0.98em;">&lt; Sourced From the Offical Godot Github</span>
+    </div>
+    <hr>
+
+    <div class="hackatime-guide" style="border:2px solid #65ba29; border-radius:10px; background:linear-gradient(90deg,#eaffea 0%,#f6fafd 100%); padding:1.5em 1.5em 1.2em 1.5em; margin:1.5em 0 2em 0; box-shadow:0 2px 10px rgba(33,58,43,0.10);">
+        <h3 style="margin-top:0; color:#388a13;">C:/ Drive Trick</h3>
+        <div class="cdrive-warning" style="margin:1em 0 0.5em 0;padding:1em 1.2em;background:linear-gradient(90deg,#fffbe6 0%,#ffe6e6 100%);border:2px solid #e6b800;border-radius:8px;box-shadow:0 2px 8px rgba(230,184,0,0.08);color:#7a4f01;font-weight:500;">
+              <span style="font-size:1.2em;font-weight:bold;">⚠️ Warning:</span><br>
+              This demonstration is for <b>educational purposes only</b> and is shown with teacher discretion.<br>
+              Any use of this method to bypass restrictions for non-educational purposes is entirely your own responsibility.<br>
+              <b>Do NOT</b> place games, unrelated programs, or any prohibited content here. <span style="color:#c00;font-weight:bold;">Misuse WILL result in disciplinary action.</span>
+            </div>
+            <h4 style="margin-top:1.2em; color:#388a13;">Steps:</h4>
+        <ol style="margin-left:1.2em;">
+          <li><b>Open Downloads Folder:</b> Make sure you have download the file, it'll be called something like <code>Godot_v4.4.1-stable_win64.exe.zip</code></li>
+          <li><b>Click the Zip to Select It:</b> After clicking the folder once hit <code>ctrl + c</code> to copy the file, make sure you are copying only the zip file</li>
+          <img src="c-drive-trick/first.png" alt="copy zip file">
+          <li><b>Search Bar in the Top:</b><p> Click it and type <code>C:/</code> and hit enter, you'll be taken to the C-Drive:</p>
+          <img src="c-drive-trick/c-drive.png" alt="copy zip file">
+            
+          <p>In here make a new folder called <code>Barracoders</code></p>
+          <img src="c-drive-trick/inside-c-drive.png" alt="copy zip file">
+
+          <p>Then Paste the Zip file you copied earlier into here and hit <code>Extract All</code> at the top:</p>
+          <img src="c-drive-trick/extract.png" alt="copy zip file">
+
+          <p>After that it should open Un-Zipped and you should be good to go!</p>
+          <img src="c-drive-trick/downloads.png" alt="copy zip file">
+          </li>
+          <li><b>Open Godot:</b> Make sure you click the file that does NOT say console on it, if you select the right file the godot editor should open and look like the images below.</li>
+        </ol>
+        <h4 style="margin-top:1.2em; color:#388a13;">Troubleshooting</h4>
+        <ul>
+          <li>Not opening? Make sure you are in the <code>C:/</code> drive and not in any other directory.</li>
+          <li>Still stuck? Ask for help from one of the Club Officers (raise your hand).</li>
+        </ul>
+        
+      </div>
+
+      <p>Click the Create New Project Button, and name your platformer. Create a new folder that will have all your future Godot games. Use the Mobile renderer. Finally, click Create at the bottom.</p>
+      <img src="25-assets/makeproject.gif" alt="Make Project">
+      <p>Setup Godot Hackatime. Follow <a href="https://hackatime.hackclub.com/docs/editors/godot" target="_blank">this</a> guide. (VERY IMPORTANT!)</p>
+  <div class="hackatime-guide" style="border:2px solid #65ba29; border-radius:10px; background:linear-gradient(90deg,#eaffea 0%,#f6fafd 100%); padding:1.5em 1.5em 1.2em 1.5em; margin:1.5em 0 2em 0; box-shadow:0 2px 10px rgba(33,58,43,0.10);">
+        <h3 style="margin-top:0; color:#388a13;">Godot Hackatime Setup Guide</h3>
+        <ol style="margin-left:1.2em;">
+          <li><b>Log into Hackatime:</b> Make sure you have a Hackatime account and are logged in.</li>
+          <li><b>Run the Setup Script:</b> Visit the setup page to automatically configure your API key and endpoint. This ensures everything works perfectly with Hackatime.</li>
+          <li><b>Install Godot Super-Wakatime Plugin:</b>
+            <ul>
+              <li><b>Option A: Asset Library (Recommended)</b>
+                <ul>
+                  <li>Open Godot Engine</li>
+                  <li>Go to the AssetLib tab in the project manager or editor</li>
+                  <li>Search for "Godot Super Wakatime"</li>
+                  <li>Click Download and then Install</li>
+                  <li>Enable the plugin in Project → Project Settings → Plugins</li>
+                </ul>
+              </li>
+              <li><b>Option B: Manual Installation</b>
+                <ul>
+                  <li>Download the latest release from Godot Super-Wakatime GitHub</li>
+                  <li>Extract the <code>addons/godot_super-wakatime</code> folder to your project's <code>addons</code> directory</li>
+                  <li>Enable the plugin in Project → Project Settings → Plugins</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><b>Configure the Plugin:</b> After enabling the plugin, you'll be prompted to enter your WakaTime API key. The plugin will automatically use your Hackatime configuration from the setup script. Start working on your game - the plugin tracks both coding and scene building activities!</li>
+        </ol>
+        <h4 style="margin-top:1.2em; color:#388a13;">Features</h4>
+        <ul>
+          <li>Accurate tracking - Differentiates between script editing and scene building</li>
+          <li>Detailed metrics - Counts keystrokes as coding, mouse clicks as scene work</li>
+          <li>Smart detection - Tracks scene structure changes and file modifications</li>
+          <li>Seamless integration - Works with your existing Hackatime setup</li>
+        </ul>
+        <h4 style="margin-top:1.2em; color:#388a13;">Troubleshooting</h4>
+        <ul>
+          <li>Not seeing your time? Make sure you completed the setup page first</li>
+          <li>Plugin not enabled? Check Project → Project Settings → Plugins and enable "Godot Super Wakatime"</li>
+          <li>Still stuck? Ask for help in Hack Club Slack (<b>#hackatime-v2</b> channel)</li>
+        </ul>
+        <h4 style="margin-top:1.2em; color:#388a13;">Next Steps</h4>
+        <p>Once configured, your game development time will automatically appear on your Hackatime dashboard. Happy game developing!</p>
+        <p style="font-size:0.98em;color:#555;margin-top:1em;">Plugin created by Bartosz (BudzioT), a Hack Clubber, and officially approved for High Seas!</p>
+      </div>
+      <div class="optional-github-container">
+        <span>Optional: Set Up a GitHub Repo</span>
+        <p style="margin:0.7em 0 0.7em 0;">Once you make one, remember to make frequent commits to your repo as you work on your game!</p>
+        <div style="text-align: center; margin: 2em 0;">
+          <iframe width="600" height="450" src="https://www.youtube.com/embed/dKqOTx06_Cw" title="How do get your Godot Game on Github" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+        </div>
+      </div>
+      
+      <h2>2. Create Your Scene</h2>
+      <p>In Scene section in the top left, you will see the options to create a root node, which is the starting point for your section. Nodes are game components like the player, the map, and the camera. All the other components will be in the main Node. Choose Other Node and select the general Node. </p>
+      <img src="25-assets/makingscene.gif" alt="Making Scene">
+      <p>Save the scene, and call it main.tscn. You will see it show up in the FileSystem below the Scene area. Later in your project, you will use this area to find different scenes, scripts, and 25-assets.</p>
+      <hr>
+      <h2>3. Creating Your Character</h2>
+      <p>In the top bar, change to 2D view instead of 3D view. The faint purple-outlined rectangle near the center is the view of the game. Click CTRL-A or use the plus button to create a new node, CharacterBody2D. Name it Player.</p>
+      <img src="25-assets/makingplayer.gif" alt="Making Player">
+      <p>Sprite2D is a node that displays textures (images). Create a Sprite2D node under Player. On the right bar, you will see the Texture and that it is empty. In the FileSystem, there is icon.svg of the Godot logo. Drag it to the texture box. Then you can resize it however you want. </p>
+      <img src="25-assets/makingsprite2d.gif" alt="Making Sprite2D">
+      <hr>
+      <h2>4. Create a Collision Box</h2>
+      <p>Add a CollisionShape2D to the Player. Select Rectangle for the shape in the Inspector on the right. Resize the blue box to cover the player. This will help with the player's physics, so it knows where to collide with the ground or other objects later on. </p>
+      <img src="25-assets/createcollisionbox.gif" alt="Create Collision Box">
+      <hr>
+      <h2>5. Create a Tileset</h2>
+      <p>Tilemaps are used to easily make grid-based 2D maps. Add a TileMapLayer node under Player. Go to the Inspector and select New Tilset in the Tile Set option. Then on the bottom bar, navigate to TileSet (not TileMap!). Import a image to the FileSystem, then drag it into TileSet. Select Yes to modifications. It splits the image into tiles.</p>
+      <img src="25-assets/createtilemap.gif" alt="Create Tilemap">
+      <hr>
+      <h2>6. Make Physics for the Tileset</h2>
+      <p>Just like the player, each block of the map needs a collision box too. Open TileSet in the Inspector and under Physics Layers, Add Element. Then in the TileSet in the bottom area, change to Paint and select Physics Layer 0 as the Paint Property. Finally, select all of the squares. </p>
+      <img src="25-assets/tilesetphysics.gif" alt="Tileset Physics">
+      <hr>
+      <h2>7. Draw a Map</h2>
+      <p>In TileMap, use the pencil tool and select one cube. Then you can draw a map in the purple rectangle in the main view. You can also adjust the size in Transform and Scale.</p>
+      <img src="25-assets/drawingmap.gif" alt="Drawing Map">
+      <hr>
+      <h2>8. Create a Player Script</h2>
+      <p>To make it so the player can jump and walk around, you need to code a script for the player. Select the player, then click the scroll with a green plus above to create a script. Choose GDScript (the language Godot uses), check template and choose CharacterBody2D: Basic Movement, and then create the script.</p>
+      <img src="25-assets/makeplayerscript.gif" alt="Make Player Script">
+      <hr>
+      <h2>9. Understand the Template Code</h2>
+      <p>Godot does come with a template for player movement, but there are many ways to make the movement and code better. First, you should understand the template code. Look at the photo below and read through why each of the lines of codes works!</p>
+      <img src="25-assets/templateexplanation.png" alt="Template Explanation">
+      <hr>
+      <h2>10. Make an Input Map</h2>
+      <p>In the template code, keys are with ui_accept, left, and right. These are not very adjustable, so using input map is a good idea. Go to Project in the top bar, Project Settings, Input Map, </p>
+      <img src="25-assets/inputmap.gif" alt="Input Map">
+      <p>Now, replace the ui controls in the code with the new input map. For example, replace ui_accept with jump. Then, replace the left and right with the new input map.</p>
+      <img src="25-assets/codeinputmap.gif" alt="Code Input Map">
+      <hr>
+      <h2>11. Tweak Movements in Code</h2>
+      <p>The current code works, but you can make lots of changes to make it better. For exmaple, on line 19 where the slowing down of the player is controlled, it is very sudden. You can change the last value (which says SPEED) with other numbers to make the player slide more.</p>
+      <img src="25-assets/movementchanges.gif" alt="Movement Changes">
+      <p>Also, in Project, Project Settings, General, and 2D Gravity, you can adjust the gravity to be higher. Finally, you can adjust the SPEED and JUMP_VELOCITY to however you want. Remember, the lower jump velocity, the higher the jump. Press ctrl+b or use the play button in the top right to run your game and see the changes.</p>
+      <div style="display: flex; justify-content: space-between; margin: 20px 0;">
+        <div style="flex: 1; text-align: center; margin-right: 10px;">
+          <h3>Before Movement Changes</h3>
+          <img src="25-assets/beforemovechanges.gif" style="max-width: 100%; height: auto;" alt="Before Movement Changes">
+        </div>
+        <div style="flex: 1; text-align: center; margin-left: 10px;">
+          <h3>After Movement Changes</h3>
+          <img src="25-assets/aftermovechanges.gif" style="max-width: 100%; height: auto;" alt="After Movement Changes">
+        </div>
+      </div>
+      
+      <h2>12. Add a Camera</h2>
+      <p>To make the camera follow the player, you need to add a camera. Add a Camera2D node under Player. You need to make sure it is centered around the player, so switch to 2D view in the top and drag the camera's center to the player. Finally, you can add a little bit of camera lag for a cool effect by going to the Inspector, and under Position Smoothing, enable it and set to the speed to around 7. The lower the speed, the more camera lag there is.</p>
+      <img src="25-assets/addcamera.gif" alt="Add Camera">
+      
+      <h2>13. Run the code</h2>
+      <p>Click ctrl+b or use the play button in the top right to start the program. Set the default scene to main. Congrats!! You now have a platformer game!</p>
+      <img src="25-assets/runprogram.gif" alt="Run Program">
+    </section>
+    <section id="end">
+      <div class="whats-next-container" style="border:2px solid #3a7bd5; border-radius:10px; background:linear-gradient(90deg,#e6f0ff 0%,#f6fafd 100%); padding:1.2em 1.5em 1.2em 1.5em; margin:2em 0 2em 0; box-shadow:0 2px 10px rgba(58,123,213,0.10); color:#1f374f;">
+        <h2 style="margin-top:0;color:#3a7bd5;">What's Next?</h2>
+        <p>For the rest of this meeting, just play around with Godot! Try experimenting with the tools, nodes, and features you've learned so far. See what you can create or customize in your platformer.</p>
+        <p>Next meeting, we'll be adding more advanced features like <b>spikes</b>, <b>checkpoints</b>, <b>scores</b>, and <b>menus</b> to your game. Get ready to take your project to the next level!</p>
+      </div>
+    </section>
+  </div>
+  <script>
+    function toggleMode() {
+      const body = document.body;
+      const btn = document.querySelector('.mode-toggle-btn');
+      if (body.classList.contains('light-mode')) {
+        body.classList.remove('light-mode');
+        body.classList.add('dark-mode');
+        btn.textContent = '☀️ Light Mode';
+      } else {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+        btn.textContent = '🌙 Dark Mode';
+      }
+    }
+  </script>
+</body>
+</html>
